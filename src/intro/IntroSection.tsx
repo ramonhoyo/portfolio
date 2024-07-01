@@ -14,7 +14,7 @@ export default function IntroSection() {
           <Grid container>
             <Grid item xs={12} md={6}>
               <Typography variant="subtitle1">
-                Hi there! I'm Ramón Hoyo, a software developer passionate about writing IT solutions that create an impact on users. For me, crafting great solutions is just a side effect (or "I believe crafting great solutions comes naturally") of loving what you do and working very hard and consistently to get to the top of your area of expertise. I know I'm still far from there, but I'm working every day to make this happen.
+                Hi there! I&apos;m Ramón Hoyo, a software developer passionate about writing IT solutions that create an impact on users. For me, crafting great solutions is just a side effect of loving what you do and working very hard and consistently to get to the top of your area of expertise. I know I&apos;m still far from there, but I&apos;m working every day to make this happen.
 
                 <br />
                 <br />
