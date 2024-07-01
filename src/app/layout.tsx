@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
 import CssBaseline from '@mui/material/CssBaseline';
 
 export const metadata: Metadata = {
@@ -22,7 +25,7 @@ export default function RootLayout({
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <body className={inter.className}>{children}</body>
+          <body className={roboto.className}>{children}</body>
         </ThemeProvider>
       </AppRouterCacheProvider>
     </html>

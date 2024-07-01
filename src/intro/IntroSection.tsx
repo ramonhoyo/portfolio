@@ -14,7 +14,8 @@ export default function IntroSection() {
           <Grid container>
             <Grid item xs={12} md={6}>
               <Typography variant="subtitle1">
-                I am a very focused software developer, with extensive experience in the design, creation and implementation of software solutions that address real user needs.
+                Hi there! I'm Ramón Hoyo, a software developer passionate about writing IT solutions that create an impact on users. For me, crafting great solutions is just a side effect (or "I believe crafting great solutions comes naturally") of loving what you do and working very hard and consistently to get to the top of your area of expertise. I know I'm still far from there, but I'm working every day to make this happen.
+
                 <br />
                 <br />
                 My skills as a professional not only encompass my skill when writing code, but is reflected in its style, design and implementation, evaluating its performance in both CPU and memory, in the same way I make effective use of SOLID principles to create IT solutions that:
@@ -26,14 +27,15 @@ export default function IntroSection() {
                 - Maintainable by other developers.<br />
               </Typography>
 
+              <br />
 
-              <Typography variant="subtitle1">Ramón Hoyo</Typography>
-              <Typography variant="subtitle2">Software Developer</Typography>
+              <Typography variant="h6">Ramón Hoyo</Typography>
+              <Typography variant="caption">Software Developer</Typography>
             </Grid>
 
             <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', display: 'flex', }}>
               <Image
-                style={{ borderRadius: "50%", objectFit: "cover" }}
+                style={{ objectFit: "cover" }}
                 src="/rahoyo-img-no-bg.png" alt="Ramón hoyo picture" width={400} height={400}></Image>
             </Grid>
           </Grid>
