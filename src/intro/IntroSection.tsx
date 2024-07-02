@@ -9,7 +9,6 @@ export default function IntroSection() {
           <Typography variant="h3">About Me</Typography>
         </Grid>
 
-
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={12} md={6}>

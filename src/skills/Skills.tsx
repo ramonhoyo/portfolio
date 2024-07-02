@@ -1,6 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 import { Grid, Paper, Typography } from '@mui/material'
+import BackendChart from './BackendChart'
+import FrontendChart from './FrontendChart'
+import DevopsChart from './DevopsChart'
 
 export default function Skills() {
   return (
@@ -9,11 +11,17 @@ export default function Skills() {
         <Grid item xs={12}>
           <Typography variant='h3'>Skills</Typography>
         </Grid>
+
+        <Grid item xs={12} md={6}>
+          <BackendChart />
+        </Grid>
+
+        <Grid item xs={12} md={6}>
+          <FrontendChart />
+        </Grid>
+
         <Grid item xs={12}>
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <Image src="/in_development.jpg" alt="In Development" width={800} height={500} />
-            <h3>Under Development...</h3>
-          </div>
+          <DevopsChart />
         </Grid>
       </Grid>
     </Paper>
