@@ -1,6 +1,9 @@
 "use client";
 import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
+import { pink } from '@mui/material/colors';
+import { Box, Button } from '@mui/material';
+import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 
 const data = [
   {
@@ -44,14 +47,20 @@ const data = [
 export default class FrontendChart extends PureComponent {
   render() {
     return (
-      <ResponsiveContainer minHeight={200} width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          <PolarRadiusAxis />
-          <Radar name="NextJS" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-        </RadarChart>
-      </ResponsiveContainer>
+      <Box>
+        <ResponsiveContainer minHeight={300} width="100%" height="100%">
+          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="subject" />
+            <PolarRadiusAxis />
+            <Radar name="Frontend" dataKey="A" stroke={pink[500]} fill={pink[200]} fillOpacity={0.6} />
+          </RadarChart>
+        </ResponsiveContainer>
+
+        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+          <Button endIcon={<OpenInFullIcon />}>Frontend</Button>
+        </Box>
+      </Box>
     );
   }
 }
