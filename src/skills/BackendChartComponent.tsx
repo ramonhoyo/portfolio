@@ -1,10 +1,7 @@
 "use client";
-import { Box, Button, Typography } from '@mui/material';
 import { green } from '@mui/material/colors';
-import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
-import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import BackendDetailsDialog from './BackendDetailsDialog';
+import React from 'react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
