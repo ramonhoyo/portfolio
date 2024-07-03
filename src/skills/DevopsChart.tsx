@@ -20,8 +20,8 @@ const data = [
   },
   {
     subject: 'Docker, k8s',
-    A: 90,
-    B: 130,
+    A: 70,
+    B: 70,
     fullMark: 150,
   },
   {
