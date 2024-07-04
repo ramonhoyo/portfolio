@@ -1,3 +1,4 @@
+import ContactBox from "@/contact/ContactBox";
 import { Grid, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -33,9 +34,7 @@ export default function IntroSection() {
             </Grid>
 
             <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', display: 'flex', }}>
-              <Image
-                style={{ objectFit: "cover" }}
-                src="/rahoyo-img-no-bg.png" alt="Ramón hoyo picture" width={400} height={400}></Image>
+              <ContactBox size="large" />
             </Grid>
           </Grid>
         </Grid>
