@@ -12,46 +12,27 @@ import FrontendRadarComponent from './FrontendRadarComponent';
 import DevopsRadarComponent from './DevopsRadarComponent';
 
 const icons = [
-  "formik",
-  "reactquery",
-  "mui",
-  "react",
-  "graphql",
-  "typescript",
-  "redux",
+  "github",
+  "kubernetes",
+  "amazonwebservices",
+  "docker",
+  "googlecloud",
+  "terraform",
+  "linux",
 ];
 
 const markdown = `
-## NextJS & React
-
-I have pleny of expertice working with NestJS, In my opinion is the best NodeJS framework. It is a progressive Node.js framework for building efficient, reliable and scalable server-side applications. It uses modern JavaScript, is built with TypeScript and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
-
-But What I love most of it is its archirecture and flexibility to work basically with any thing, from RESTful APIs to GraphQL, Websockets, Queues, etc. not to mention the microservices package that has a default integration with most of the popular message brokers like RabbitMQ, Kafka, Redis, etc.
-
-In the projects sections you can find some of the projects I have worked with NestJS.
-<br />
-<br />
+## Devops
 
 
-## NodeJS
+As software developer, I have been working with Devops tools and practices for a while, I have experience working with:
 
-As Node developer, I not only work with NestJS, Express or any other backend framework, In the past I used NodeJS to build a cross-platform desktop application, using ElectronJS including a C++ Node Addon loaded in runtime as a shared library.
-<br />
-<br />
-
-## API integrations
-
-A long my career I got the oportunity to work in differents project that requeries some external interactions, like:
-<br />
-<br />
-
-  - **Payment gateways** (Stripe).
-  - **Email services** (Mailchimp).
-  - **OAuth2** (Google, Azure, etc).
-  - **Web3 integrations** (Ethereum, Binance Smart Chain, Bitcoin).
-  - **Cloud services** (AWS, Azure, Google Cloud).
-  - **and many more...**
-
+- **CI/CD**: I have experience working with Gitlab CI/CD, Github Actions, etc.
+- **Cloud Services**: I have experience working with AWS, Azure, Google Cloud.
+- **Containers**: I have experience working with Docker, Docker Compose, Kubernetes, etc.
+- **Infrastructure as Code**: I have experience working with Terraform, CloudFormation, etc.
+- **AWS**: I have experience working with AWS, EC2, S3, RDS, etc.
+- **Linux**: I have experience working with Linux, I have been using it as my main OS for a while.
 <br />
 <br />
 `;
