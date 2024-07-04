@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Paper, Typography } from '@mui/material'
 import BackendChart from './BackendChart'
 import FrontendChart from './FrontendChart'
-import DevopsChart from './DevopsChart'
+import DevopsSkills from './DevopsSkills';
 
 export default function Skills() {
   return (
@@ -21,7 +21,7 @@ export default function Skills() {
         </Grid>
 
         <Grid item xs={12}>
-          <DevopsChart />
+          <DevopsSkills />
         </Grid>
       </Grid>
     </Paper>
