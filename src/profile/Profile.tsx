@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Profile() {
   return (
-    <Paper sx={{ my: 2, p: 2 }}>
+    <Paper sx={{ my: 2, p: 2 }} hidden>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h3">Profile</Typography>
