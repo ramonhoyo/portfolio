@@ -12,13 +12,11 @@ export default function Home() {
     <main>
       <HeaderSection />
 
-      <Container>
-        <IntroSection />
-        <Profile />
-        <Skills />
-        <Projects />
-        <Contact />
-      </Container>
+      <IntroSection />
+      <Profile />
+      <Skills />
+      <Projects />
+      <Contact />
     </main>
   );
 }

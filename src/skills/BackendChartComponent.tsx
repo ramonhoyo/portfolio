@@ -5,7 +5,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 
 const data = [
   { subject: 'TypeORM (MySQL, Postgres)', A: 80 },
-  { subject: 'Mongoose (MongoDB)', A: 85 },
+  { subject: 'Mongoose', A: 85 },
   { subject: 'Swagger', A: 90 },
   { subject: 'GraphQL', A: 75 },
   { subject: 'Redis', A: 80 },

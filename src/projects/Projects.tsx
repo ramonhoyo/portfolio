@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import { Box, Grid, Paper, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Typography } from '@mui/material'
 import TempleteProjectCard from './TempleteProjectCard'
 
 
@@ -52,7 +52,7 @@ const data = [
 
 export default function Projects() {
   return (
-    <Box sx={{ my: 2, p: 2 }}>
+    <Container sx={{ my: 2, p: 2 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant='h3'>Projects</Typography>
@@ -72,6 +72,6 @@ export default function Projects() {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </Container>
   )
 }

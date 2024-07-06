@@ -1,29 +1,89 @@
+"use client";
 import React from 'react'
-import { Grid, Paper, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Typography } from '@mui/material'
 import BackendChart from './BackendChart'
 import FrontendChart from './FrontendChart'
 import DevopsSkills from './DevopsSkills';
+import InfiniteLooper from '@/components/InfiniteLooper';
+import { dir } from 'console';
+
+const frontEndIcons = [
+  "formik",
+  "reactquery",
+  "mui",
+  "react",
+  "graphql",
+  "typescript",
+  "redux",
+];
+
+const devOpsIcons = [
+  "github",
+  "kubernetes",
+  "amazonwebservices",
+  "docker",
+  "googlecloud",
+  "terraform",
+  "linux",
+];
+
+
+const backendIcons = [
+  "swagger",
+  "redis",
+  "mongodb",
+  "nestjs",
+  "graphql",
+  "typescript",
+  "typeorm",
+];
+
+
+function IconsRendered({ icons, direction }: { icons: string[], direction: 'left' | 'right' }) {
+  return (
+    <InfiniteLooper speed={40} direction={direction}>
+      {icons.map((it) => (
+        <img
+          key={it}
+          alt={it}
+          height={64}
+          width={64}
+          style={{ margin: 34 }}
+          src={`https://cdn.simpleicons.org/${it}/gray`}
+        />
+      ))}
+    </InfiniteLooper>
+  );
+}
 
 export default function Skills() {
   return (
-    <Paper sx={{ my: 2, p: 2 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant='h3'>Skills</Typography>
-        </Grid>
+    <Box>
+      <Box sx={{ position: 'absolute' }}>
+        <IconsRendered icons={backendIcons} direction='left' />
+        <IconsRendered icons={frontEndIcons} direction='right' />
+        <IconsRendered icons={devOpsIcons} direction='left' />
+        <IconsRendered icons={frontEndIcons} direction='right' />
+        <IconsRendered icons={backendIcons} direction='left' />
+        <IconsRendered icons={backendIcons} direction='right' />
+      </Box>
 
-        <Grid item xs={12} md={6}>
-          <BackendChart />
-        </Grid>
 
-        <Grid item xs={12} md={6}>
-          <FrontendChart />
-        </Grid>
+      <Container maxWidth="lg">
+        <Grid container spacing={2} sx={{ my: 4 }}>
+          <Grid item xs={12} md={6}>
+            <BackendChart />
+          </Grid>
 
-        <Grid item xs={12}>
-          <DevopsSkills />
+          <Grid item xs={12} md={6}>
+            <FrontendChart />
+          </Grid>
+
+          <Grid item xs={12}>
+            <DevopsSkills />
+          </Grid>
         </Grid>
-      </Grid>
-    </Paper>
+      </Container>
+    </Box>
   )
 }

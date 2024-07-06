@@ -1,15 +1,10 @@
 import ContactBox from "@/contact/ContactBox";
-import { Grid, Paper, Typography } from "@mui/material";
-import Image from "next/image";
+import { Container, Grid, Paper, Typography } from "@mui/material";
 
 export default function IntroSection() {
   return (
-    <Paper sx={{ p: 2, my: 2 }}>
+    <Container component={Paper} sx={{ p: 2, my: 2 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant="h3">About Me</Typography>
-        </Grid>
-
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={12} md={6}>
@@ -39,6 +34,6 @@ export default function IntroSection() {
           </Grid>
         </Grid>
       </Grid>
-    </Paper>
+    </Container>
   );
 }
