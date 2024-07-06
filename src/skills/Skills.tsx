@@ -40,7 +40,7 @@ const backendIcons = [
 
 function IconsRendered({ icons, direction }: { icons: string[], direction: 'left' | 'right' }) {
   return (
-    <InfiniteLooper speed={80} direction={direction}>
+    <InfiniteLooper speed={100} direction={direction}>
       {[...icons, ...icons, ...icons].map((it, idx) => (
         <img
           key={it}
@@ -48,7 +48,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
           height={64}
           width={64}
           style={{ margin: 32 }}
-          src={`https://cdn.simpleicons.org/${it}/${idx % 7 === 0 ? '' : 'gray'}`}
+          src={`https://cdn.simpleicons.org/${it}/${Math.random() > 0.7 ? '' : 'gray'}`}
         />
       ))}
     </InfiniteLooper>

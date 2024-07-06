@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Card } from '@mui/material';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import FrontendRadarComponent from './FrontendRadarComponent';
 import FrontendDetailsDialog from './FrontendDetailsDialog';
@@ -11,8 +11,7 @@ export default function FrontendChart() {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box sx={{
-        bgcolor: 'background.default',
+      <Card sx={{
         left: '50%',
         transform: 'translate(-50%)',
         borderRadius: '50%',
@@ -20,7 +19,7 @@ export default function FrontendChart() {
         width: 400,
         position: 'absolute'
       }}>
-      </Box>
+      </Card>
 
       <Box sx={{ pt: 4 }}>
         <FrontendRadarComponent />

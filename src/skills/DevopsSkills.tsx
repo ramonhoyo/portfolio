@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Card } from '@mui/material';
 import DevopsRadarComponent from './DevopsRadarComponent';
 import DevopsDetailsDialog from './DevopsDetailsDialog';
 
@@ -10,8 +10,7 @@ export default function DevopsSkills() {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box sx={{
-        bgcolor: 'background.default',
+      <Card sx={{
         left: '50%',
         transform: 'translate(-50%)',
         borderRadius: '50%',
@@ -19,7 +18,7 @@ export default function DevopsSkills() {
         width: 400,
         position: 'absolute'
       }}>
-      </Box>
+      </Card>
 
       <Box sx={{ pt: 4 }}>
         <DevopsRadarComponent />

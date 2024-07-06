@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button } from '@mui/material';
+import { Box, Button, Card } from '@mui/material';
 import React from 'react';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import BackendDetailsDialog from './BackendDetailsDialog';
@@ -10,16 +10,17 @@ export default function BackendChart() {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box sx={{
-        bgcolor: 'background.default',
-        left: '50%',
-        transform: 'translate(-50%)',
-        borderRadius: '50%',
-        height: 400,
-        width: 400,
-        position: 'absolute'
-      }}>
-      </Box>
+      <Card
+        sx={{
+          left: '50%',
+          transform: 'translate(-50%)',
+          borderRadius: '50%',
+          elevation: 3,
+          height: 400,
+          width: 400,
+          position: 'absolute'
+        }}>
+      </Card>
 
       <Box sx={{ pt: 4 }}>
         <BackendChartComponent />
