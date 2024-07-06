@@ -59,7 +59,7 @@ export default function Projects() {
         </Grid>
 
         {data.map((item) => (
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} key={item.title}>
             <TempleteProjectCard
               title={item.title}
               subtitle={item.subtitle}
