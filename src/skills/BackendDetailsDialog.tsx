@@ -8,7 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import BackendChartComponent from './BackendChartComponent';
 import Markdown from 'react-markdown';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 
 
@@ -54,6 +54,8 @@ export type BackendDetailsDialogProps = {
 
 export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
   const { open, setOpen } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleClose = () => {
     setOpen(false);
@@ -74,6 +76,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
       <Dialog
         open={open}
         onClose={handleClose}
+        fullScreen={fullScreen}
         scroll='paper'
         maxWidth='lg'
         aria-labelledby="scroll-dialog-title"

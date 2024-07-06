@@ -25,7 +25,7 @@ export default function IntroSection() {
               <br />
 
               <Typography variant="h6">Ramón Hoyo</Typography>
-              <Typography variant="caption">Software Developer</Typography>
+              <Typography variant="caption">Fullstack Developer</Typography>
             </Grid>
 
             <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', display: 'flex', }}>

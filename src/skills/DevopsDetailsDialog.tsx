@@ -6,7 +6,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import BackendChartComponent from './BackendChartComponent';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import FrontendRadarComponent from './FrontendRadarComponent';
 import DevopsRadarComponent from './DevopsRadarComponent';
@@ -44,6 +44,8 @@ export type Props = {
 
 export default function DevopsDetailsDialog(props: Props) {
   const { open, setOpen } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleClose = () => {
     setOpen(false);
@@ -64,6 +66,7 @@ export default function DevopsDetailsDialog(props: Props) {
       <Dialog
         open={open}
         onClose={handleClose}
+        fullScreen={fullScreen}
         scroll='paper'
         maxWidth='lg'
         aria-labelledby="scroll-dialog-title"

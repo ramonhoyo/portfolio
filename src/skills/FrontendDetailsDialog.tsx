@@ -5,7 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import FrontendRadarComponent from './FrontendRadarComponent';
 
@@ -61,6 +61,8 @@ export type BackendDetailsDialogProps = {
 
 export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
   const { open, setOpen } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleClose = () => {
     setOpen(false);
@@ -82,6 +84,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
         open={open}
         onClose={handleClose}
         scroll='paper'
+        fullScreen={fullScreen}
         maxWidth='lg'
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
