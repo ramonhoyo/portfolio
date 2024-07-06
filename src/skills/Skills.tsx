@@ -27,7 +27,6 @@ const devOpsIcons = [
   "linux",
 ];
 
-
 const backendIcons = [
   "swagger",
   "redis",
@@ -42,14 +41,14 @@ const backendIcons = [
 function IconsRendered({ icons, direction }: { icons: string[], direction: 'left' | 'right' }) {
   return (
     <InfiniteLooper speed={80} direction={direction}>
-      {[...icons, ...icons, ...icons].map((it) => (
+      {[...icons, ...icons, ...icons].map((it, idx) => (
         <img
           key={it}
           alt={it}
           height={64}
           width={64}
-          style={{ margin: 34 }}
-          src={`https://cdn.simpleicons.org/${it}/gray`}
+          style={{ margin: 32 }}
+          src={`https://cdn.simpleicons.org/${it}/${idx % 7 === 0 ? '' : 'gray'}`}
         />
       ))}
     </InfiniteLooper>
