@@ -11,7 +11,7 @@ export default function BackendChart() {
   return (
     <Box sx={{ position: 'relative' }}>
       <Box sx={{
-        bgcolor: 'white',
+        bgcolor: 'background.default',
         left: '50%',
         transform: 'translate(-50%)',
         borderRadius: '50%',

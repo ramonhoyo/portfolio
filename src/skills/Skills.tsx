@@ -41,8 +41,8 @@ const backendIcons = [
 
 function IconsRendered({ icons, direction }: { icons: string[], direction: 'left' | 'right' }) {
   return (
-    <InfiniteLooper speed={40} direction={direction}>
-      {icons.map((it) => (
+    <InfiniteLooper speed={80} direction={direction}>
+      {[...icons, ...icons, ...icons].map((it) => (
         <img
           key={it}
           alt={it}
