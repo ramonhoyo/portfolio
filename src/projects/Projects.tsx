@@ -58,8 +58,8 @@ export default function Projects() {
           <Typography variant='h3'>Projects</Typography>
         </Grid>
 
-        {data.map((item) => (
-          <Grid item xs={12} md={4} key={item.title}>
+        {data.map((item, idx) => (
+          <Grid item xs={12} md={4} key={idx}>
             <TempleteProjectCard
               title={item.title}
               subtitle={item.subtitle}

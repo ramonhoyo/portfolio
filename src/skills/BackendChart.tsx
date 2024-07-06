@@ -9,7 +9,7 @@ export default function BackendChart() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={{ position: 'relative', p: 2 }}>
       <Card
         sx={{
           left: '50%',
@@ -18,7 +18,7 @@ export default function BackendChart() {
           elevation: 3,
           height: 400,
           width: 400,
-          position: 'absolute'
+          position: 'absolute',
         }}>
       </Card>
 

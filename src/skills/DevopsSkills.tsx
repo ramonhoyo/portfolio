@@ -9,14 +9,14 @@ export default function DevopsSkills() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={{ position: 'relative', p: 2 }}>
       <Card sx={{
         left: '50%',
         transform: 'translate(-50%)',
         borderRadius: '50%',
         height: 400,
         width: 400,
-        position: 'absolute'
+        position: 'absolute',
       }}>
       </Card>
 

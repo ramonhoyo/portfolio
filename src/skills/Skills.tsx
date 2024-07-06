@@ -40,7 +40,7 @@ const backendIcons = [
 
 function IconsRendered({ icons, direction }: { icons: string[], direction: 'left' | 'right' }) {
   return (
-    <InfiniteLooper speed={100} direction={direction}>
+    <InfiniteLooper speed={200} direction={direction}>
       {[...icons, ...icons, ...icons].map((it, idx) => (
         <img
           key={it}
@@ -57,8 +57,14 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
 
 export default function Skills() {
   return (
-    <Box>
-      <Box sx={{ position: 'absolute' }}>
+    <Box sx={{ position: 'relative' }}>
+      <Box id="skill-looper-container" sx={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, overflow: 'hidden' }}>
+        <IconsRendered icons={backendIcons} direction='left' />
+        <IconsRendered icons={frontEndIcons} direction='right' />
+        <IconsRendered icons={devOpsIcons} direction='left' />
+        <IconsRendered icons={frontEndIcons} direction='right' />
+        <IconsRendered icons={backendIcons} direction='left' />
+        <IconsRendered icons={backendIcons} direction='right' />
         <IconsRendered icons={backendIcons} direction='left' />
         <IconsRendered icons={frontEndIcons} direction='right' />
         <IconsRendered icons={devOpsIcons} direction='left' />
@@ -69,7 +75,7 @@ export default function Skills() {
 
 
       <Container maxWidth="lg">
-        <Grid container spacing={2} sx={{ my: 4 }}>
+        <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <BackendChart />
           </Grid>

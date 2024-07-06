@@ -10,7 +10,7 @@ export default function FrontendChart() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={{ position: 'relative', p: 2 }}>
       <Card sx={{
         left: '50%',
         transform: 'translate(-50%)',
