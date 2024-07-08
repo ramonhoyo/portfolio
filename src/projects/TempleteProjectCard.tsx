@@ -41,12 +41,13 @@ export type TempleteProjectCardProps = {
   description: string;
   cover: string;
   imgs: string[];
+  icon?: string;
   onSeeMore: () => void;
   onLike: () => void;
 };
 
 export default function TempleteProjectCard(props: TempleteProjectCardProps) {
-  const { title, subtitle, tags, description, imgs, cover, onSeeMore, onLike } = props;
+  const { title, subtitle, tags, description, imgs, icon, cover, onSeeMore, onLike } = props;
 
   const handleOpen = () => {
   };
@@ -55,7 +56,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
     <Card>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar aria-label="recipe" src={icon}>
             R
           </Avatar>
         }
