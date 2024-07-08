@@ -48,7 +48,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
           height={64}
           width={64}
           style={{ margin: 32 }}
-          src={`https://cdn.simpleicons.org/${it}/${Math.random() > 0.7 ? '' : 'gray'}`}
+          src={`https://cdn.simpleicons.org/${it}/${Math.random() > 0.9 ? '' : 'gray'}`}
         />
       ))}
     </InfiniteLooper>
