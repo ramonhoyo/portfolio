@@ -1,14 +1,15 @@
 "use client";
 import React from 'react'
-import { Box, Container, Grid, Paper, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import TempleteProjectCard from './TempleteProjectCard'
 
 
 const data = [
   {
     title: 'UPIITA Parking',
+    icon: 'https://github.com/ramonhoyo/parking-android/blob/main/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png?raw=true',
     subtitle: 'This is parking application for a final degree project at UPIITA-IPN, Mexico',
-    tags: ['git', 'react', 'javascript', 'stripe', 'firebase', 'googlemaps'],
+    tags: ['git', 'react', 'javascript', 'stripe', 'firebase', 'googlemaps', 'github'],
     description: `
 Showcase react-native application, for allowing parking operation such as
 
@@ -32,7 +33,7 @@ Showcase react-native application, for allowing parking operation such as
     title: 'Ciphertop Desktop (Windows, MacOS)',
     icon: 'https://i0.wp.com/cyphertop.com/wp-content/uploads/2021/03/cypher.png?resize=150%2C150&ssl=1',
     subtitle: 'Encryption application build with ElectronJS',
-    tags: ['react', 'redux', 'electron', 'typescript', 'c++', 'webrtc'],
+    tags: ['react', 'redux', 'electron', 'typescript', 'c++', 'webrtc', 'gitlab'],
     description: `
 Security application allow users to:
 
@@ -65,6 +66,50 @@ https://cyphertop.com/
       'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/desktop/08.png?raw=true',
     ]
   },
+  {
+    title: 'Cyphertop Android',
+    icon: 'https://i0.wp.com/cyphertop.com/wp-content/uploads/2021/03/cypher.png?resize=150%2C150&ssl=1',
+    subtitle: 'Encryption application for Android with custom encryption algorithm.',
+    tags: ['android', 'androidstudio', 'gitlab', 'kotlin', 'c++', 'webrtc'],
+    description: `
+This is the Android version of Cyphertop application, a security application allow users to:
+
+- Add other users as friends.
+- Create groups.
+- Send/Receive messages (text, audio, attach files from camera, gallery, internal vault etc)
+- Secure audio/video calls with custom algorimth.
+- Internal vault to store files encrypted with own custom encryption algorimth.
+- Steganography operations. aslo encrypted.
+- Dark/Ligth support.
+- Multi-language.
+- And more.
+
+Tecnical details:
+
+- Native Android application (Kotkin)
+- Flows android archirecture guidelines. Conserns separation by data, domain and ui Layers, also separted by feature.
+- Navigation graph and NavArgs.
+- Dependency Injection with Hilt and Dagger.
+- WebRTC for audio/video callings, with custom encryption algorithm implemented with the InsertableStreams API.
+- Room
+- Graphql API and REST API.
+- Material Animation Library
+`,
+    cover: 'https://picsum.photos/seed/project-2/300/200',
+    imgs: [
+
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/01.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/02.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/03.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/04.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/05.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/06.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/07.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/08.png?raw=true',
+      'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/09.png?raw=true',
+    ]
+  },
+
   //  {
   //    title: 'Project 3',
   //    subtitle: 'Subtitle 3',
