@@ -1,11 +1,10 @@
 "use client";
 import React from 'react'
-import { Box, Container, Grid, Paper, Typography } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
 import BackendChart from './BackendChart'
 import FrontendChart from './FrontendChart'
 import DevopsSkills from './DevopsSkills';
 import InfiniteLooper from '@/components/InfiniteLooper';
-import { dir } from 'console';
 
 const frontEndIcons = [
   "formik",
@@ -45,8 +44,8 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
         <img
           key={it}
           alt={it}
-          height={64}
-          width={64}
+          height={32}
+          width={32}
           style={{ margin: 32 }}
           src={`https://cdn.simpleicons.org/${it}/${Math.random() > 0.9 ? '' : 'gray'}`}
         />
@@ -70,6 +69,7 @@ export default function Skills() {
         <IconsRendered icons={devOpsIcons} direction='left' />
         <IconsRendered icons={frontEndIcons} direction='right' />
         <IconsRendered icons={backendIcons} direction='left' />
+        <IconsRendered icons={backendIcons} direction='right' />
         <IconsRendered icons={backendIcons} direction='right' />
       </Box>
 
