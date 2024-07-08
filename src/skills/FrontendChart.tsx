@@ -15,8 +15,8 @@ export default function FrontendChart() {
         left: '50%',
         transform: 'translate(-50%)',
         borderRadius: '50%',
-        height: 400,
-        width: 400,
+        height: '25rem',
+        width: '25rem',
         position: 'absolute'
       }}>
       </Card>

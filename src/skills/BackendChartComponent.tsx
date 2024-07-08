@@ -14,7 +14,7 @@ const data = [
 
 export default function BackendChartComponent() {
   return (
-    <ResponsiveContainer minHeight={300} width="100%" height="100%">
+    <ResponsiveContainer minHeight='20rem' width="100%" height="100%">
       <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" domain={[0, 100]} />

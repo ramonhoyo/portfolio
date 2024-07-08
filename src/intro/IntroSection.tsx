@@ -1,6 +1,10 @@
 import ContactBox from "@/contact/ContactBox";
 import { Container, Grid, Paper, Typography } from "@mui/material";
 
+function Inner({ children }: any) {
+  return <Typography variant="subtitle1" sx={{ color: 'red' }}>{children}</Typography>
+}
+
 export default function IntroSection() {
   return (
     <Container component={Paper} sx={{ p: 2, my: 2 }}>

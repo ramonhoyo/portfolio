@@ -16,8 +16,8 @@ export default function BackendChart() {
           transform: 'translate(-50%)',
           borderRadius: '50%',
           elevation: 3,
-          height: 400,
-          width: 400,
+          height: '25rem',
+          width: '25rem',
           position: 'absolute',
         }}>
       </Card>
