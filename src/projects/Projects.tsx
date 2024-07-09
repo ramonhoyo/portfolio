@@ -94,6 +94,7 @@ Tecnical details:
 - Room
 - Graphql API and REST API.
 - Material Animation Library
+
 `,
     cover: 'https://picsum.photos/seed/project-2/300/200',
     imgs: [
@@ -109,60 +110,55 @@ Tecnical details:
       'https://github.com/ramonhoyo/cyphertop-screenshots/blob/main/mobile/09.png?raw=true',
     ]
   },
+  {
+    title: 'CDMX Feminicidios APP',
+    subtitle: 'Project to show stats related to crimes against women at CDMX, México',
+    tags: ['react', 'chartdotjs', 'googlesheets', 'mapbox', 'typescript', 'github', 'vercel'],
+    description: `
+Application to show femenicides and other crimes against women at México City.
 
-  //  {
-  //    title: 'Project 3',
-  //    subtitle: 'Subtitle 3',
-  //    tags: ['tag1', 'tag3'],
-  //    description: 'Description 3',
-  //    cover: 'https://picsum.photos/seed/project-3/300/200',
-  //    imgs: [
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/1.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/2.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/3.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/4.jpg?raw=true',
-  //    ]
-  //  },
-  //  {
-  //    title: 'Project 1',
-  //    subtitle: 'Subtitle 1',
-  //    tags: ['tag1', 'tag2'],
-  //    description: 'Description 1',
-  //    cover: 'https://picsum.photos/seed/project-1/300/200',
-  //    imgs: [
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/1.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/2.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/3.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/4.jpg?raw=true',
-  //    ]
-  //  },
-  //  {
-  //    title: 'Project 2',
-  //    subtitle: 'Subtitle 2',
-  //    tags: ['tag1', 'tag2'],
-  //    description: 'Description 2',
-  //    cover: 'https://picsum.photos/seed/project-2/300/200',
-  //    imgs: [
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/1.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/2.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/3.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/4.jpg?raw=true',
-  //    ]
-  //  },
-  //  {
-  //    title: 'Project 3',
-  //    subtitle: 'Subtitle 3',
-  //    tags: ['tag1', 'tag3'],
-  //    description: 'Description 3',
-  //    cover: 'https://picsum.photos/seed/project-3/300/200',
-  //    imgs: [
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/1.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/2.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/3.jpg?raw=true',
-  //      'https://github.com/ramonhoyo/parking-android/blob/main/screenshots/4.jpg?raw=true',
-  //    ]
-  //  },
+Users can move over the map to see cases of:
 
+- Feminicide
+- Sexual abuse
+- Sexual harassment
+- Rape
+- Family violence
+
+Also users can filter results by years.
+
+This application uses two data sources to retrive information.
+
+1 - Official goverment open data: A excel is submited to a Goolge Sheet and consumed from our API.
+2 - IA twitter detector. Internally a IA grab tweets and analize them to extract data. (I don't develop or mantain that IA).
+
+With the information getted from data source a several stats are created and displayed to the user.
+
+Implementation:
+
+- Implemented in React with Next.js framework
+- API routes to peform operations based on user filters selections
+- Full responsive design
+- Use of recharts for generate charts
+- googleapis for get information from Google Sheet
+- Mapbox, clustering for large data sets
+- PDF export
+
+
+https://app-delitos-upiita-ipn.vercel.app/
+`,
+    cover: 'https://picsum.photos/seed/project-2/300/200',
+    imgs: [
+      '/screenshots/feminicides/00.png',
+      '/screenshots/feminicides/01.png',
+      '/screenshots/feminicides/02.png',
+      '/screenshots/feminicides/03.png',
+      '/screenshots/feminicides/04.png',
+      '/screenshots/feminicides/05.png',
+      '/screenshots/feminicides/06.png',
+      '/screenshots/feminicides/07.png',
+    ]
+  },
 ];
 
 export default function Projects() {
