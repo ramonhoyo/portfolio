@@ -11,7 +11,7 @@ const data = [
     subtitle: 'This is parking application for a final degree project at UPIITA-IPN, Mexico',
     tags: ['git', 'react', 'javascript', 'stripe', 'firebase', 'googlemaps', 'github'],
     description: `
-Showcase react-native application, for allowing parking operation such as
+**Showcase react-native application**, that allow users parking operation such as
 
 - Register vehicules.
 - Get into a parking.
@@ -115,7 +115,7 @@ Tecnical details:
     subtitle: 'Project to show stats related to crimes against women at CDMX, México',
     tags: ['react', 'chartdotjs', 'googlesheets', 'mapbox', 'typescript', 'github', 'vercel'],
     description: `
-Application to show femenicides and other crimes against women at México City.
+Application to show feminicides and other crimes against women at México City.
 
 Users can move over the map to see cases of:
 
@@ -145,7 +145,7 @@ Implementation:
 - PDF export
 
 
-https://app-delitos-upiita-ipn.vercel.app/
+[Open Project](https://app-delitos-upiita-ipn.vercel.app/)
 `,
     cover: 'https://picsum.photos/seed/project-2/300/200',
     imgs: [
@@ -159,6 +159,49 @@ https://app-delitos-upiita-ipn.vercel.app/
       '/screenshots/feminicides/07.png',
     ]
   },
+  {
+    title: 'MERN Stack Showcase (repo)',
+    subtitle: 'Showcase that demostrate how I can build a backend and frontend',
+    tags: ['nestjs', 'nextdotjs', 'mongodb', 'typescript', 'github', 'railway'],
+    description: `
+**MERN media challenge**
+
+This proyect is a proposed solution for the challenge of the company "Disruptive Studios" for the position of "MERN Fullstack".
+
+The challenge:
+
+please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructive-mern-test/blob/main/Challenge.pdf) for the full description of the challenge.
+
+
+**Backend:** I implemented the solution node: 
+ - nestjs
+ - express
+ - mongo
+ - swagger
+
+**Frondent:** I implemented this solution with a nextjs proyect with next tegnologies:
+
+- React
+- mui v5
+- formik
+- react-query.
+
+[Github repo](https://github.com/ramonhoyo/disructive-mern-test)
+[Live Demo](https://mellow-acceptance-production.up.railway.app/)
+`,
+    cover: 'https://picsum.photos/seed/project-2/300/200',
+    icon: '/screenshots/media/disruptive.png',
+    imgs: [
+      '/screenshots/media/01.png',
+      '/screenshots/media/02.png',
+      '/screenshots/media/03.png',
+      '/screenshots/media/04.png',
+      '/screenshots/media/05.png',
+      '/screenshots/media/06.png',
+      '/screenshots/media/07.png',
+    ]
+  },
+
 ];
 
 export default function Projects() {
