@@ -3,8 +3,8 @@ import Image from 'next/image'
 import React from 'react'
 
 const data = [
-  { icon: 'linkedin', link: 'https://www.linkedin.com/in/ramonhoyo', text: 'LinkedIn' },
-  { icon: 'github', link: 'https://github.com/rahoyo', text: 'Github' },
+  { icon: 'linkedin', link: 'https://www.linkedin.com/in/rahoyo', text: 'LinkedIn' },
+  { icon: 'github', link: 'https://github.com/ramonhoyo', text: 'Github' },
   { icon: 'x', link: 'https://x.com/andreshoyodev', text: 'X (Twitter)' },
   { icon: 'stackoverflow', link: 'https://stackoverflow.com/users/8749345/andress-hoyo', text: 'Stack Overflow' },
   { icon: 'chessdotcom', link: 'https://www.chess.com/member/andresshoyo', text: 'Chess.com' },
