@@ -24,7 +24,7 @@ export type TempleteProjectCardProps = {
 };
 
 export default function TempleteProjectCard(props: TempleteProjectCardProps) {
-  const { title, subtitle, tags, description, imgs, icon } = props;
+  const { title, subtitle, tags, description, imgs, icon, onSeeMore } = props;
 
   return (
     <Card>
@@ -63,7 +63,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
 
         <div style={{ flex: 1 }} />
 
-        <Button>Show More</Button>
+        <Button onClick={onSeeMore}>Show More</Button>
       </CardActions>
     </Card>
   );

@@ -13,7 +13,13 @@ import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function SwipeableTextMobileStepper({ imgs }: { imgs: string[] }) {
+
+export type SwipeableTextMobileStepperProps = {
+  imgs: string[];
+  height?: number;
+};
+
+function SwipeableTextMobileStepper({ imgs, height }: SwipeableTextMobileStepperProps) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = imgs.length;
@@ -31,7 +37,7 @@ function SwipeableTextMobileStepper({ imgs }: { imgs: string[] }) {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -42,12 +48,11 @@ function SwipeableTextMobileStepper({ imgs }: { imgs: string[] }) {
           <div key={index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <img
-                height={255}
+                height={height || 255}
                 style={{
-                  height: 255,
+                  height: height || 255,
                   display: 'block',
                   objectFit: 'contain',
-                  maxWidth: 400,
                   overflow: 'hidden',
                   width: '100%',
                 }}

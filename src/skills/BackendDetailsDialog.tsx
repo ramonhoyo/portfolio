@@ -72,48 +72,46 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
   }, [open]);
 
   return (
-    <React.Fragment>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullScreen={fullScreen}
-        scroll='paper'
-        maxWidth='lg'
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-      >
-        <DialogTitle id="scroll-dialog-title">Backend Development</DialogTitle>
-        <DialogContent dividers>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      fullScreen={fullScreen}
+      scroll='paper'
+      maxWidth='lg'
+      aria-labelledby="scroll-dialog-title"
+      aria-describedby="scroll-dialog-description"
+    >
+      <DialogTitle id="scroll-dialog-title">Backend Development</DialogTitle>
+      <DialogContent dividers>
 
-          <BackendChartComponent />
+        <BackendChartComponent />
 
 
-          <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
-            <img alt="swagger" height="64" width="64" src="https://cdn.simpleicons.org/swagger/" />
-            <img alt="redis" height="64" width="64" src="https://cdn.simpleicons.org/redis/" />
-            <img alt="mongodb" height="64" width="64" src="https://cdn.simpleicons.org/mongodb/" />
-            <img alt="nestjs" height="64" width="64" src="https://cdn.simpleicons.org/nestjs/" />
-            <img alt="graphql" height="64" width="64" src="https://cdn.simpleicons.org/graphql/" />
-            <img alt="typescript" height="64" width="64" src="https://cdn.simpleicons.org/typescript/" />
-            <img alt="typeorm" height="64" width="64" src="https://cdn.simpleicons.org/typeorm/" />
-          </Box>
+        <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
+          <img alt="swagger" height="64" width="64" src="https://cdn.simpleicons.org/swagger/" />
+          <img alt="redis" height="64" width="64" src="https://cdn.simpleicons.org/redis/" />
+          <img alt="mongodb" height="64" width="64" src="https://cdn.simpleicons.org/mongodb/" />
+          <img alt="nestjs" height="64" width="64" src="https://cdn.simpleicons.org/nestjs/" />
+          <img alt="graphql" height="64" width="64" src="https://cdn.simpleicons.org/graphql/" />
+          <img alt="typescript" height="64" width="64" src="https://cdn.simpleicons.org/typescript/" />
+          <img alt="typeorm" height="64" width="64" src="https://cdn.simpleicons.org/typeorm/" />
+        </Box>
 
-          <Box sx={{ p: 2 }}>
-            <MarkdownPreview style={{ backgroundColor: 'white', color: 'black', }} source={markdown} />
-          </Box>
+        <Box sx={{ p: 2 }}>
+          <MarkdownPreview style={{ backgroundColor: 'white', color: 'black', }} source={markdown} />
+        </Box>
 
-          <DialogContentText
-            id="scroll-dialog-description"
-            ref={descriptionElementRef}
-            tabIndex={-1}
-          >
+        <DialogContentText
+          id="scroll-dialog-description"
+          ref={descriptionElementRef}
+          tabIndex={-1}
+        >
 
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Close</Button>
-        </DialogActions>
-      </Dialog>
-    </React.Fragment>
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>Close</Button>
+      </DialogActions>
+    </Dialog>
   );
 }

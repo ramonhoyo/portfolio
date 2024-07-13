@@ -1,7 +1,8 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import TempleteProjectCard from './TempleteProjectCard'
+import ProjectDetailsDialog from './ProjectDetailsDialog';
 
 
 const data = [
@@ -205,6 +206,10 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
 ];
 
 export default function Projects() {
+  const [project, setProject] = useState<Record<string, any> | null>(null);
+
+
+
   return (
     <Container sx={{ my: 2, p: 2 }}>
       <Grid container spacing={2}>
@@ -222,12 +227,17 @@ export default function Projects() {
               icon={item.icon}
               imgs={item.imgs}
               cover={item.cover}
-              onSeeMore={() => null}
+              onSeeMore={() => setProject(item)}
               onLike={() => null}
             />
           </Grid>
         ))}
       </Grid>
+
+      <ProjectDetailsDialog
+        data={project}
+        setData={setProject}
+      />
     </Container>
   )
 }
