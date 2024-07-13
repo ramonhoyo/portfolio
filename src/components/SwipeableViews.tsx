@@ -69,6 +69,7 @@ function SwipeableTextMobileStepper({ imgs, height }: SwipeableTextMobileStepper
         activeStep={activeStep}
         nextButton={
           <Button
+            sx={{ color: 'white' }}
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
@@ -81,7 +82,9 @@ function SwipeableTextMobileStepper({ imgs, height }: SwipeableTextMobileStepper
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button
+            sx={{ color: 'white' }}
+            size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (
