@@ -57,7 +57,7 @@ export default function ContactBox(props: Props) {
           ))}
         </Box>
 
-        <Typography variant='caption' color='secondary'>Find me on solial media</Typography>
+        <Typography variant='caption' color='secondary'>Find me on social media</Typography>
       </Grid>
     </Grid>
   )
