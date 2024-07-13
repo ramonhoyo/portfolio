@@ -9,7 +9,7 @@ const sacramento = Sacramento({
 });
 
 function In({ children }: any) {
-  return <Typography variant="h5" color='secondary' sx={{ display: 'contents' }}>{children}</Typography>
+  return <Typography variant="h5" color='primary' sx={{ display: 'contents' }}>{children}</Typography>
 }
 
 export default function IntroSection() {
@@ -41,7 +41,7 @@ export default function IntroSection() {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', display: 'flex', }}>
+            <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', mt: 2, display: 'flex', }}>
               <ContactBox size="large" />
             </Grid>
           </Grid>

@@ -89,7 +89,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Backend Development</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Frontend Development</DialogTitle>
         <DialogContent dividers>
 
           <FrontendRadarComponent />
@@ -107,7 +107,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
           </Box>
 
           <Box sx={{ p: 2 }}>
-            <MarkdownPreview source={markdown} />
+            <MarkdownPreview style={{ backgroundColor: 'white', color: 'black', }} source={markdown} />
           </Box>
 
           <DialogContentText

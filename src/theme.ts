@@ -34,6 +34,9 @@ const theme = createTheme({
         outlined: {
           borderRadius: 16,
         },
+        contained: {
+          borderRadius: 16,
+        },
       },
     },
   },

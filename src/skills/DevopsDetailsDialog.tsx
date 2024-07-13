@@ -90,7 +90,7 @@ export default function DevopsDetailsDialog(props: Props) {
           </Box>
 
           <Box sx={{ p: 2 }}>
-            <MarkdownPreview source={markdown} />
+            <MarkdownPreview style={{ backgroundColor: 'white', color: 'black', }} source={markdown} />
           </Box>
 
           <DialogContentText

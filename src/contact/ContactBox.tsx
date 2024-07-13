@@ -34,18 +34,18 @@ export default function ContactBox(props: Props) {
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
         <Image
-          style={{ objectFit: "cover", borderRadius: '50%', borderWidth: 2, borderColor: 'green', borderStyle: 'solid' }}
+          style={{ objectFit: "cover", borderRadius: '50%', borderWidth: 2, borderColor: '#8f4c38', borderStyle: 'solid' }}
           src="/rahoyo-img-no-bg.png" alt="Ramón hoyo picture" width={sizePx} height={sizePx}
         />
       </Grid>
 
       <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant='h5'>Ramón Hoyo</Typography>
-        <Typography variant='caption'>Fullstack Developer</Typography>
+        <Typography variant='subtitle1'>Fullstack Developer</Typography>
       </Grid>
 
       <Grid item xs={12} sx={{ display: 'fkex', justifyContent: 'center' }}>
-        <Button href='mailto:rahoyo@outlook.com' variant='outlined'>Send me an email</Button>
+        <Button href='mailto:rahoyo@outlook.com' variant='contained'>Send me an email</Button>
       </Grid>
 
       <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -57,7 +57,7 @@ export default function ContactBox(props: Props) {
           ))}
         </Box>
 
-        <Typography variant='caption'>Find me on solial media</Typography>
+        <Typography variant='caption' color='secondary'>Find me on solial media</Typography>
       </Grid>
     </Grid>
   )
