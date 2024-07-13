@@ -12,27 +12,20 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#8f4c38',
+      main: '#ffb5a0',
     },
     secondary: {
-      main: '#77574e',
+      main: '#e7bdb2',
     },
     background: {
-      default: "#fff8f6",
-      paper: '#ffffff'
+      default: "#1a110f",
     },
-    error: {
-      main: '#ba1a1a',
-    }
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
-        },
-        outlined: {
-          borderRadius: 16,
+          transform: 'none',
         },
       },
     },

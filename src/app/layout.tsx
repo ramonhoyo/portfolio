@@ -4,11 +4,12 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
+import CssBaseline from '@mui/material/CssBaseline';
+
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
-})
-import CssBaseline from '@mui/material/CssBaseline';
+});
 
 export const metadata: Metadata = {
   title: "Ramón Hoyo",

@@ -1,8 +1,15 @@
 import ContactBox from "@/contact/ContactBox";
-import { Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
+import { Sacramento } from 'next/font/google';
 
-function Inner({ children }: any) {
-  return <Typography variant="subtitle1" sx={{ color: 'red' }}>{children}</Typography>
+const sacramento = Sacramento({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap'
+});
+
+function In({ children }: any) {
+  return <Typography variant="h5" color='secondary' sx={{ display: 'contents' }}>{children}</Typography>
 }
 
 export default function IntroSection() {
@@ -12,24 +19,26 @@ export default function IntroSection() {
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={12} md={6}>
-              <Typography variant="subtitle1">
-                Hi there! I&apos;m Ramón Hoyo, a software developer passionate about writing IT solutions that create an impact on users. For me, crafting great solutions is just a side effect of loving what you do and working very hard and consistently to get to the top of your area of expertise. I know I&apos;m still far from there, but I&apos;m working every day to make this happen.
-
-                <br />
-                <br />
-                My skills as a professional not only encompass my skill when writing code, but is reflected in its style, design and implementation, evaluating its performance in both CPU and memory, in the same way I make effective use of SOLID principles to create IT solutions that:
-
-                <br />
-                <br />
-                - Last over time.<br />
-                - Are scalable.<br />
-                - Maintainable by other developers.<br />
+              <Typography variant="h3" color="primary">
+                Fullstack Developer
+              </Typography>
+              <br />
+              <Typography variant="h5">
+                <In>Hey!</In> I&apos;m Ramón Hoyo, a software developer with <In>over 7 years</In> of experience creating IT solutions that
+                really make a difference for users. I believe that building <In>awesome solutions</In> comes from loving what you do
+                and putting in the hard work to stay <In>competitive in a growing field</In>. I know I’ve got more to learn,
+                but I’m dedicated to <In>improving every day!</In>
               </Typography>
 
               <br />
+              <br />
+              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Typography color='primary' variant="h4" sx={{ ...sacramento.style }}>
+                  Ramón Hoyo
+                </Typography>
 
-              <Typography variant="h6">Ramón Hoyo</Typography>
-              <Typography variant="caption">Fullstack Developer</Typography>
+                <Button variant="outlined" color='secondary'>Read more</Button>
+              </Box>
             </Grid>
 
             <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', display: 'flex', }}>

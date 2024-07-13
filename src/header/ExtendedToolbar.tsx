@@ -10,7 +10,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import { Sacramento } from 'next/font/google';
+
+const sacramento = Sacramento({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap'
+});
 
 const pages = ['About me', 'Skills', 'Portfolio', 'Contact'];
 
@@ -30,18 +36,17 @@ function ResponsiveAppBar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="a"
-            href="#"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            @rahoyo
+            @RAHOYO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -81,7 +86,7 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Typography
-            variant="h5"
+            variant="h4"
             noWrap
             sx={{
               mr: 2,
@@ -105,7 +110,7 @@ function ResponsiveAppBar() {
             ))}
 
           </Box>
-          <Button href='mailto:rahoyo@outlook.com' color='secondary' sx={{ color: 'white' }} variant='outlined'>Write me!</Button>
+          <Button href='mailto:rahoyo@outlook.com' sx={{ color: 'white' }} variant='outlined'>Write me</Button>
         </Toolbar>
       </Container>
     </AppBar>

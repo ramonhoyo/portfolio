@@ -39,7 +39,6 @@ export default function ContactBox(props: Props) {
         />
       </Grid>
 
-
       <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant='h5'>Ramón Hoyo</Typography>
         <Typography variant='caption'>Fullstack Developer</Typography>
