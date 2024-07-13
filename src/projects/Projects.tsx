@@ -222,7 +222,7 @@ Manage your funds safely and reliably with BSPay Wallet, giving you the protecti
 [Google Play](https://play.google.com/store/apps/details?id=com.businessshop.bspay&hl=en)
 `,
     cover: 'https://picsum.photos/seed/project-2/300/200',
-    icon: 'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/icon.png?raw=true',
+    icon: 'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/playstore-icon.png?raw=true',
     imgs: [
       'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/1.jpg?raw=true',
       'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/2.jpg?raw=true',
