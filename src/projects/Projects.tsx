@@ -1,9 +1,15 @@
 "use client";
 import React, { useState } from 'react'
-import { Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Typography } from '@mui/material'
 import TempleteProjectCard from './TempleteProjectCard'
 import ProjectDetailsDialog from './ProjectDetailsDialog';
+import { Sacramento } from 'next/font/google';
 
+const sacramento = Sacramento({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap'
+});
 
 const data = [
   {
@@ -276,6 +282,10 @@ export default function Projects() {
             />
           </Grid>
         ))}
+
+        <Grid component={Paper} item xs={12} sx={{ mt: 2, ml: 2, p: 2, justifyContent: 'center', display: 'flex', backgroundColor: 'primary' }}>
+          <Typography variant='h3' color='primary' sx={{ ...sacramento.style }}>I'm working on new things, they will appear soon here...</Typography>
+        </Grid>
       </Grid>
 
       <ProjectDetailsDialog
