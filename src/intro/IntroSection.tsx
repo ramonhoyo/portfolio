@@ -37,7 +37,7 @@ export default function IntroSection() {
                   Ramón Hoyo
                 </Typography>
 
-                <Button variant="outlined" color='secondary'>Read more</Button>
+                <Button variant="outlined" color='secondary'>Meet more about me</Button>
               </Box>
             </Grid>
 

@@ -26,7 +26,6 @@ export type TempleteProjectCardProps = {
 export default function TempleteProjectCard(props: TempleteProjectCardProps) {
   const { title, subtitle, tags, description, imgs, icon } = props;
 
-
   return (
     <Card>
       <CardHeader
