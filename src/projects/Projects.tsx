@@ -202,6 +202,50 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
       '/screenshots/media/07.png',
     ]
   },
+  {
+    title: 'BSPay',
+    subtitle: 'Centralized exchange for cryptocurrencies',
+    tags: ['react', 'graphql', 'android', 'ios', 'github'],
+    description: `
+**BSPay: a centralized exchange**
+
+BSPay Wallet is your ally to boost your operations safely and reliably, offering an intuitive experience and detailed analysis. It is designed so that you can take full advantage of the benefits and achieve your financial goals with complete confidence.
+
+The ultimate digital wallet:
+
+1. Easy-to-use user interface, designed to give you an intuitive experience.
+2. Top-level security to protect your transactions and personal data.
+3. Get access to a wide variety of cryptocurrencies and quality services.
+
+Manage your funds safely and reliably with BSPay Wallet, giving you the protection and safeguard that your assets deserve. Our main focus is to provide you with peace of mind and confidence when transacting on our platform. The custody system guarantees effective protection of your assets and ensures their optimal protection. Additionally, for greater transparency and security, we perform real-time reserve testing, updated hourly, to demonstrate the correspondence of the assets we custody.
+
+[Google Play](https://play.google.com/store/apps/details?id=com.businessshop.bspay&hl=en)
+`,
+    cover: 'https://picsum.photos/seed/project-2/300/200',
+    icon: 'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/icon.png?raw=true',
+    imgs: [
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/1.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/2.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/3.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/4.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/5.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/6.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/7.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/8.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/9.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/10.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/11.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/12.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/13.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/14.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/15.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/16.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/17.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/18.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/19.jpg?raw=true',
+      'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/20.jpg?raw=true',
+    ]
+  },
 
 ];
 
