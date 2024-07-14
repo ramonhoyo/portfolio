@@ -284,7 +284,7 @@ export default function Projects() {
         ))}
 
         <Grid component={Paper} item xs={12} sx={{ mt: 2, ml: 2, p: 2, justifyContent: 'center', display: 'flex', backgroundColor: 'primary' }}>
-          <Typography variant='h3' color='primary' sx={{ ...sacramento.style }}>I'm working on new things, they will appear soon here...</Typography>
+          <Typography variant='h3' color='primary' sx={{ ...sacramento.style }}>I&apos;m working on new things, they will appear soon here...</Typography>
         </Grid>
       </Grid>
 
