@@ -52,17 +52,7 @@ export default function IntroDetailsDialog(props: IntroDetailsDialogProps) {
       aria-describedby="scroll-dialog-description"
     >
       <DialogTitle id="scroll-dialog-title">About me</DialogTitle>
-      <DialogContent dividers>
-        <IntroAccordion />
-
-        <DialogContentText
-          id="scroll-dialog-description"
-          ref={descriptionElementRef}
-          tabIndex={-1}
-        >
-
-        </DialogContentText>
-      </DialogContent>
+      <IntroAccordion />
       <DialogActions>
         <Button onClick={handleClose}>Close</Button>
       </DialogActions>

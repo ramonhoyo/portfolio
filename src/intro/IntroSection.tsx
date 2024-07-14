@@ -1,9 +1,10 @@
 "use client";
 import ContactBox from "@/contact/ContactBox";
-import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Collapse, Container, Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Sacramento } from 'next/font/google';
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
+import IntroAccordion from "./IntroAccordion";
 
 const sacramento = Sacramento({
   weight: '400',
@@ -32,6 +33,9 @@ function In({ children }: any) {
 
 export default function IntroSection() {
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box sx={{ bgcolor: 'white', mt: 2 }}>
@@ -58,15 +62,34 @@ export default function IntroSection() {
                     Ramón Hoyo
                   </Typography>
 
-                  <Button onClick={() => setOpen(true)} variant="outlined" color='secondary'>Meet more about me</Button>
+                  <Button
+                    sx={{ height: 'min-content' }}
+                    onClick={() => setExpanded(!expanded)}
+                    variant="outlined"
+                    color='secondary'
+                  >
+                    {expanded ? 'Read less' : 'Read more'}
+                  </Button>
                 </Box>
               </Grid>
 
+              {isXs && (
+                <Grid item xs={12} component={Collapse} in={expanded} sx={{ pt: 2 }}>
+                  <IntroAccordion />
+                </Grid>
+              )}
+
               <Grid item xs={12} md={6} sx={{ alignItems: 'center', justifyContent: 'center', mt: 2, display: 'flex', }}>
-                <ContactBox size="large" />
+                <ContactBox size="large" hideName />
               </Grid>
             </Grid>
           </Grid>
+
+          {!isXs && (
+            <Grid item xs={12} component={Collapse} in={expanded}>
+              <IntroAccordion />
+            </Grid>
+          )}
 
           <Grid item xs={12} sx={{ mt: 4 }} />
 

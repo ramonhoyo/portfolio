@@ -13,10 +13,11 @@ const data = [
 
 export type Props = {
   size?: 'small' | 'medium' | 'large'
+  hideName?: boolean;
 }
 
 export default function ContactBox(props: Props) {
-  const { size } = props;
+  const { size, hideName } = props;
 
   let sizePx = 126;
   switch (size) {
@@ -39,7 +40,7 @@ export default function ContactBox(props: Props) {
         />
       </Grid>
 
-      <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Grid item xs={12} sx={{ display: hideName ? 'none' : 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant='h5'>Ramón Hoyo</Typography>
         <Typography variant='subtitle1'>Fullstack Developer</Typography>
       </Grid>
