@@ -6,7 +6,8 @@ import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/Accord
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -65,6 +66,8 @@ const sections = [
 ];
 
 export default function IntroAccordion() {
+  const theme = useTheme();
+  const full = useMediaQuery(theme.breakpoints.down('md'));
   const [expanded, setExpanded] = React.useState<string | false>('how-am-i');
 
   const handleChange =
@@ -85,8 +88,10 @@ export default function IntroAccordion() {
             aria-controls={`${it.id}-content`}
             id={`${it.id}-header`}
           >
-            <Typography variant='h6' sx={{ width: '33%', flexShrink: 0 }}>{it.title}</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>{it.subtitle}</Typography>
+            <Typography variant='h6' sx={{ width: full ? '100%' : '33%', flexShrink: 0 }}>{it.title}</Typography>
+            {!full && (
+              <Typography sx={{ color: 'text.secondary' }}>{it.subtitle}</Typography>
+            )}
           </AccordionSummary>
           <AccordionDetails>
             <Typography>{it.content}</Typography>
