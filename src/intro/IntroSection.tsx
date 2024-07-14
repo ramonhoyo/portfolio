@@ -103,7 +103,11 @@ export default function IntroSection() {
 
               <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
                 {mernStack.map(it => (
-                  <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                  <Grid
+                    key={it.name}
+                    item
+                    sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                  >
                     <img
                       height="64"
                       width="64"
@@ -133,7 +137,7 @@ export default function IntroSection() {
 
                 <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
                   {softStack.map(it => (
-                    <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                       <img
                         height="64"
                         width="64"

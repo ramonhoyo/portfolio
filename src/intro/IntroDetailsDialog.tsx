@@ -1,4 +1,4 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import IntroAccordion from './IntroAccordion';
