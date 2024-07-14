@@ -1,10 +1,14 @@
 "use client";
+import FaceIcon from '@mui/icons-material/Face';
+import MyLocationIcon from '@mui/icons-material/MyLocation';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ContactBox from "@/contact/ContactBox";
-import { Box, Button, Collapse, Container, Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Paper, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Sacramento } from 'next/font/google';
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
+import { MyLocationRounded } from '@mui/icons-material';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -38,7 +42,7 @@ export default function IntroSection() {
   const isXs = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
-    <Box sx={{ bgcolor: 'white', mt: 2 }}>
+    <Box sx={{ bgcolor: 'white', mt: 0 }}>
       <Container sx={{ p: 2 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -47,7 +51,15 @@ export default function IntroSection() {
                 <Typography variant="h3" color="primary">
                   Fullstack Developer
                 </Typography>
+
+                <Stack direction='row' spacing={1}>
+                  <Chip icon={<MyLocationIcon color='primary' />} label="Mérida, Venezuela" variant="outlined" />
+                  <Chip icon={<RecordVoiceOverIcon color='primary' />} label="B1 English" variant="outlined" />
+                  <Chip icon={<RecordVoiceOverIcon color='primary' />} label="C2 Spanish" variant="outlined" />
+                </Stack>
+
                 <br />
+
                 <Typography variant="h5">
                   <In>Hey!</In> I&apos;m Ramón Hoyo, a software developer with <In>over 7 years</In> of experience creating IT solutions that
                   really make a difference for users. I believe that building <In>awesome solutions</In> comes from loving what you do
@@ -58,7 +70,7 @@ export default function IntroSection() {
                 <br />
                 <br />
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <Typography color='primary' variant="h3" sx={{ ...sacramento.style }}>
+                  <Typography color='primary' variant="h4" sx={{ ...sacramento.style }}>
                     Ramón Hoyo
                   </Typography>
 

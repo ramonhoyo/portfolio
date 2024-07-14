@@ -39,30 +39,29 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 
 const sections = [
   {
-    id: 'how-am-i',
+    id: 'who-am-i',
     title: 'How am I',
     subtitle: 'a brief description about me',
-    content: 'I born on 1996 in Venezuela, I grow up in a humble familiy',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id sapien pretium, dapibus metus id, tristique metus. Sed et lectus ullamcorper, malesuada lacus eget, vehicula sem. Quisque non placerat orci. Nunc ac ornare nisi. Etiam quis sollicitudin urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et leo luctus, fringilla sapien eget, rhoncus diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum interdum aliquet risus at porta. Aenean porttitor nunc aliquet lobortis dapibus. Donec at nulla quis magna placerat elementum laoreet ut erat. Proin a tincidunt nunc. Aliquam lacinia arcu magna, ut cursus arcu pellentesque ut. Integer ullamcorper nibh quis erat ultrices fermentum. Maecenas tempus feugiat mauris nec laoreet. Morbi ut consectetur libero.',
   },
   {
     id: 'what-motivates-me',
-    title: 'What motivate me',
+    title: 'What motivates me',
     subtitle: 'a brief description about me',
-    content: 'I born on 1996 in Venezuela, I grow up in a humble familiy',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id sapien pretium, dapibus metus id, tristique metus. Sed et lectus ullamcorper, malesuada lacus eget, vehicula sem. Quisque non placerat orci. Nunc ac ornare nisi. Etiam quis sollicitudin urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et leo luctus, fringilla sapien eget, rhoncus diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum interdum aliquet risus at porta. Aenean porttitor nunc aliquet lobortis dapibus. Donec at nulla quis magna placerat elementum laoreet ut erat. Proin a tincidunt nunc. Aliquam lacinia arcu magna, ut cursus arcu pellentesque ut. Integer ullamcorper nibh quis erat ultrices fermentum. Maecenas tempus feugiat mauris nec laoreet. Morbi ut consectetur libero.',
   },
   {
     id: 'personality',
     title: 'Personality',
     subtitle: 'a brief description about me',
-    content: 'I born on 1996 in Venezuela, I grow up in a humble familiy',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id sapien pretium, dapibus metus id, tristique metus. Sed et lectus ullamcorper, malesuada lacus eget, vehicula sem. Quisque non placerat orci. Nunc ac ornare nisi. Etiam quis sollicitudin urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et leo luctus, fringilla sapien eget, rhoncus diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum interdum aliquet risus at porta. Aenean porttitor nunc aliquet lobortis dapibus. Donec at nulla quis magna placerat elementum laoreet ut erat. Proin a tincidunt nunc. Aliquam lacinia arcu magna, ut cursus arcu pellentesque ut. Integer ullamcorper nibh quis erat ultrices fermentum. Maecenas tempus feugiat mauris nec laoreet. Morbi ut consectetur libero.',
   },
   {
     id: 'hobbies',
     title: 'What do I like',
     subtitle: 'a brief description about me',
-    content: 'I born on 1996 in Venezuela, I grow up in a humble familiy',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id sapien pretium, dapibus metus id, tristique metus. Sed et lectus ullamcorper, malesuada lacus eget, vehicula sem. Quisque non placerat orci. Nunc ac ornare nisi. Etiam quis sollicitudin urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et leo luctus, fringilla sapien eget, rhoncus diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum interdum aliquet risus at porta. Aenean porttitor nunc aliquet lobortis dapibus. Donec at nulla quis magna placerat elementum laoreet ut erat. Proin a tincidunt nunc. Aliquam lacinia arcu magna, ut cursus arcu pellentesque ut. Integer ullamcorper nibh quis erat ultrices fermentum. Maecenas tempus feugiat mauris nec laoreet. Morbi ut consectetur libero.',
   }
-
 ];
 
 export default function IntroAccordion() {
