@@ -1,14 +1,13 @@
 "use client";
-import FaceIcon from '@mui/icons-material/Face';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
+import ElderlyIcon from '@mui/icons-material/Elderly';
 import ContactBox from "@/contact/ContactBox";
-import { Box, Button, Chip, Collapse, Container, Grid, Paper, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Stack, Tooltip, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Sacramento } from 'next/font/google';
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
-import { MyLocationRounded } from '@mui/icons-material';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -18,17 +17,17 @@ const sacramento = Sacramento({
 
 
 const mernStack = [
-  { name: 'mongodb', fill: '#47A248' },
-  { name: 'express', fill: '#00000' },
-  { name: 'react', fill: '#61DAFB' },
-  { name: 'nodedotjs', fill: '#5FA04E' },
+  { title: 'Mongo DB', name: 'mongodb', fill: '#47A248' },
+  { title: 'Express', name: 'express', fill: '#00000' },
+  { title: 'React', name: 'react', fill: '#61DAFB' },
+  { title: 'Node', name: 'nodedotjs', fill: '#5FA04E' },
 ];
 
 const softStack = [
-  { name: 'go', fill: '#00ADD8' },
-  { name: 'htmx', fill: '#3366CC' },
-  { name: 'mysql', fill: '#4479A1' },
-  { name: 'postgresql', fill: '#4169E1' },
+  { title: 'Golang', name: 'go', fill: '#00ADD8' },
+  { title: 'htmx', name: 'htmx', fill: '#3366CC' },
+  { title: 'MySQL', name: 'mysql', fill: '#4479A1' },
+  { title: 'Postgre SQL', name: 'postgresql', fill: '#4169E1' },
 ];
 
 function In({ children }: any) {
@@ -55,7 +54,7 @@ export default function IntroSection() {
                 <Stack direction='row' spacing={1}>
                   <Chip icon={<MyLocationIcon color='primary' />} label="Mérida, Venezuela" variant="outlined" />
                   <Chip icon={<RecordVoiceOverIcon color='primary' />} label="B1 English" variant="outlined" />
-                  <Chip icon={<RecordVoiceOverIcon color='primary' />} label="C2 Spanish" variant="outlined" />
+                  <Chip icon={<ElderlyIcon color='primary' />} label="+7 years" variant="outlined" />
                 </Stack>
 
                 <br />
@@ -109,33 +108,29 @@ export default function IntroSection() {
             <Grid item xs={12} md={6}>
               <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
                 <Typography style={{ ...sacramento.style }} variant="h2" color="primary">
-                  Hard Skills
+                  Main Stack
                 </Typography>
               </Grid>
 
               <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
                 {mernStack.map(it => (
-                  <Grid
-                    key={it.name}
-                    item
-                    sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
-                  >
-                    <img
-                      height="64"
-                      width="64"
-                      src={`https://cdn.simpleicons.org/${it.name}`}
-                    />
-                    <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
-                      {it.name.substring(0, 1)}
-                    </Typography>
-                  </Grid>
+                  <Tooltip key={it.name} title={it.title}>
+                    <Grid
+                      key={it.name}
+                      item
+                      sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                    >
+                      <img
+                        height="64"
+                        width="64"
+                        src={`https://cdn.simpleicons.org/${it.name}`}
+                      />
+                      <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
+                        {it.name.substring(0, 1)}
+                      </Typography>
+                    </Grid>
+                  </Tooltip>
                 ))}
-              </Grid>
-
-              <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                <Typography variant='body1'>
-                  I have a solid experience working with the MERN stack
-                </Typography>
               </Grid>
             </Grid>
 
@@ -149,23 +144,19 @@ export default function IntroSection() {
 
                 <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
                   {softStack.map(it => (
-                    <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                      <img
-                        height="64"
-                        width="64"
-                        src={`https://cdn.simpleicons.org/${it.name}`}
-                      />
-                      <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
-                        {it.name.substring(0, 1)}
-                      </Typography>
-                    </Grid>
+                    <Tooltip key={it.name} title={it.title}>
+                      <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <img
+                          height="64"
+                          width="64"
+                          src={`https://cdn.simpleicons.org/${it.name}`}
+                        />
+                        <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
+                          {it.name.substring(0, 1)}
+                        </Typography>
+                      </Grid>
+                    </Tooltip>
                   ))}
-                </Grid>
-
-                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Typography variant='body1'>
-                    I have a solid experience working with the MERN stack
-                  </Typography>
                 </Grid>
               </Grid>
 
