@@ -1,10 +1,17 @@
 "use client";
 import React from 'react'
-import { Box, Container, Grid } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import BackendChart from './BackendChart'
 import FrontendChart from './FrontendChart'
 import DevopsSkills from './DevopsSkills';
 import InfiniteLooper from '@/components/InfiniteLooper';
+import { Sacramento } from 'next/font/google';
+
+const sacramento = Sacramento({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap'
+});
 
 const frontEndIcons = [
   "formik",
@@ -57,24 +64,15 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
 export default function Skills() {
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box id="skill-looper-container" sx={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, overflow: 'hidden' }}>
-        <IconsRendered icons={backendIcons} direction='left' />
-        <IconsRendered icons={frontEndIcons} direction='right' />
-        <IconsRendered icons={devOpsIcons} direction='left' />
-        <IconsRendered icons={frontEndIcons} direction='right' />
-        <IconsRendered icons={backendIcons} direction='left' />
-        <IconsRendered icons={backendIcons} direction='right' />
-        <IconsRendered icons={backendIcons} direction='left' />
-        <IconsRendered icons={frontEndIcons} direction='right' />
-        <IconsRendered icons={devOpsIcons} direction='left' />
-        <IconsRendered icons={frontEndIcons} direction='right' />
-        <IconsRendered icons={backendIcons} direction='left' />
-        <IconsRendered icons={backendIcons} direction='right' />
-        <IconsRendered icons={backendIcons} direction='right' />
-      </Box>
-
+      <IconsRendered icons={[...backendIcons, ...frontEndIcons, ...devOpsIcons]} direction='left' />
 
       <Container maxWidth="lg">
+        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography color='primary' variant='h1' sx={{ ...sacramento.style, fontStyle: 'bold' }}>
+            Tecnologies
+          </Typography>
+        </Grid>
+
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <BackendChart />

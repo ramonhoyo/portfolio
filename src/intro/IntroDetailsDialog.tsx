@@ -1,6 +1,7 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect } from 'react'
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import IntroAccordion from './IntroAccordion';
 
 
 const markdown = `
@@ -52,9 +53,7 @@ export default function IntroDetailsDialog(props: IntroDetailsDialogProps) {
     >
       <DialogTitle id="scroll-dialog-title">About me</DialogTitle>
       <DialogContent dividers>
-        <Box sx={{ p: 2 }}>
-          <MarkdownPreview style={{ backgroundColor: 'white', color: 'black', }} source={markdown} />
-        </Box>
+        <IntroAccordion />
 
         <DialogContentText
           id="scroll-dialog-description"

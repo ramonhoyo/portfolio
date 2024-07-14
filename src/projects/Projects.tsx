@@ -263,8 +263,8 @@ export default function Projects() {
   return (
     <Container sx={{ my: 2, p: 2 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant='h3'>Projects</Typography>
+        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography color='primary' variant='h1' sx={{ ...sacramento.style, fontStyle: 'bold' }}>Projects</Typography>
         </Grid>
 
         {data.map((item, idx) => (
