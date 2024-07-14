@@ -1,6 +1,9 @@
+"use client";
 import ContactBox from "@/contact/ContactBox";
 import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
 import { Sacramento } from 'next/font/google';
+import IntroDetailsDialog from "./IntroDetailsDialog";
+import { useState } from "react";
 
 const sacramento = Sacramento({
   weight: '400',
@@ -13,6 +16,8 @@ function In({ children }: any) {
 }
 
 export default function IntroSection() {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container component={Paper} sx={{ p: 2, my: 2 }}>
       <Grid container spacing={2}>
@@ -37,7 +42,7 @@ export default function IntroSection() {
                   Ramón Hoyo
                 </Typography>
 
-                <Button variant="outlined" color='secondary'>Meet more about me</Button>
+                <Button onClick={() => setOpen(true)} variant="outlined" color='secondary'>Meet more about me</Button>
               </Box>
             </Grid>
 
@@ -47,6 +52,8 @@ export default function IntroSection() {
           </Grid>
         </Grid>
       </Grid>
+
+      <IntroDetailsDialog open={open} setOpen={setOpen} />
     </Container>
   );
 }
