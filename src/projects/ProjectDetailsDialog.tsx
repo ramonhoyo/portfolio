@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useEffect } from 'react'
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
+import InfiniteLooper from '@/components/InfiniteLooper';
 
 
 export type Props = {
@@ -49,11 +50,13 @@ export default function ProjectDetailsDialog(props: Props) {
         <SwipeableTextMobileStepper imgs={data?.imgs || []} height={600} />
 
         <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
-          {data?.tags.map((tag: string) => (
-            <Tooltip title={tag} key={tag}>
-              <Image alt={tag} height="64" width="64" src={`https://cdn.simpleicons.org/${tag}`} />
-            </Tooltip>
-          ))}
+          <InfiniteLooper speed={100} direction='right'>
+            {data?.tags.map((tag: string) => (
+              <Tooltip title={tag} key={tag}>
+                <Image alt={tag} style={{ margin: 32, }} height={32} width={32} src={`https://cdn.simpleicons.org/${tag}`} />
+              </Tooltip>
+            ))}
+          </InfiniteLooper>
         </Box>
 
         <Box sx={{ p: 2 }}>
