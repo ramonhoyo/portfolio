@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MarkdownPreview from '@uiw/react-markdown-preview';
-import { Box, Button, Divider, Grow, Tooltip } from '@mui/material';
+import { Box, Button, Divider, Grow, Tooltip, Zoom } from '@mui/material';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
 import Image from 'next/image';
 
@@ -37,7 +37,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
   };
 
   return (
-    <Card>
+    <Card elevation={isHover ? 24 : 0}>
       <div
         onMouseEnter={handleMouseEnter} onMouseLeave={handleOnMouseLeave}
       >
@@ -70,7 +70,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
               left: 0,
               right: 0,
               height: 250,
-              bgcolor: 'rgba(1, 1, 1, 0.2)',
+              bgcolor: 'rgba(1, 1, 1, 0.05)',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
