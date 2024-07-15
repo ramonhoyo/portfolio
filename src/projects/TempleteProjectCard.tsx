@@ -75,7 +75,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-              <Button variant='contained'>View more</Button>
+              <Button variant='contained' onClick={onSeeMore}>View more</Button>
             </Box>
           </Grow>
         </CardContent>
