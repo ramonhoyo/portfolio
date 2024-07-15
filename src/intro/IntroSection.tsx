@@ -47,8 +47,8 @@ export default function IntroSection() {
           <Grid item xs={12}>
             <Grid container>
               <Grid item xs={12} md={6}>
-                <Typography variant="h3" color="primary">
-                  Fullstack Developer
+                <Typography variant="h4" color="primary">
+                  Software Architect & Fullstack
                 </Typography>
 
                 <Stack direction='row' spacing={1}>
@@ -60,10 +60,10 @@ export default function IntroSection() {
                 <br />
 
                 <Typography variant="h5">
-                  <In>Hey!</In> I&apos;m Ramón Hoyo, a software developer with <In>over 7 years</In> of experience creating IT solutions that
-                  really make a difference for users. I believe that building <In>awesome solutions</In> comes from loving what you do
+                  <In>Hey!</In> I&apos;m Ramón Hoyo, a software architect and a fullstack developer with <In>over 7 years</In> of experience creating IT solutions that
+                  generate impact on user&apos;s life. I believe that building <In>awesome solutions</In> comes from loving what you do
                   and putting in the hard work to stay <In>competitive in a growing field</In>. I know I’ve got more to learn,
-                  but I’m dedicated to <In>improving every day!</In>
+                  but I&apos;m dedicated to <In>improving every day!</In>
                 </Typography>
 
                 <br />
