@@ -8,6 +8,7 @@ import { Sacramento } from 'next/font/google';
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
+import Image from 'next/image';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -120,7 +121,8 @@ export default function IntroSection() {
                       item
                       sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
                     >
-                      <img
+                      <Image
+                        alt={it.title}
                         height="64"
                         width="64"
                         src={`https://cdn.simpleicons.org/${it.name}`}
@@ -146,7 +148,8 @@ export default function IntroSection() {
                   {softStack.map(it => (
                     <Tooltip key={it.name} title={it.title}>
                       <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                        <img
+                        <Image
+                          alt={it.name}
                           height="64"
                           width="64"
                           src={`https://cdn.simpleicons.org/${it.name}`}

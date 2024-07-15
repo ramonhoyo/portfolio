@@ -6,6 +6,7 @@ import FrontendChart from './FrontendChart'
 import DevopsSkills from './DevopsSkills';
 import InfiniteLooper from '@/components/InfiniteLooper';
 import { Sacramento } from 'next/font/google';
+import Image from 'next/image';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -48,7 +49,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
   return (
     <InfiniteLooper speed={200} direction={direction}>
       {[...icons, ...icons, ...icons].map((it, idx) => (
-        <img
+        <Image
           key={it}
           alt={it}
           height={32}

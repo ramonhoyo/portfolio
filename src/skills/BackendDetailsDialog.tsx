@@ -99,7 +99,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
         <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
           <InfiniteLooper speed={200} direction='left'>
             {imgs.map((it, idx) => (
-              <img
+              <Image
                 key={`${it}-${idx}`}
                 alt={it}
                 height={32}

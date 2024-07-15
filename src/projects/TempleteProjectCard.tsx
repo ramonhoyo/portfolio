@@ -10,6 +10,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import { Button, Tooltip } from '@mui/material';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
+import Image from 'next/image';
 
 export type TempleteProjectCardProps = {
   title: string;
@@ -50,7 +51,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
       <CardActions disableSpacing sx={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
         {tags.map(tag =>
           <Tooltip title={tag} key={tag}>
-            <img
+            <Image
               alt={tag}
               height={32}
               width={32}

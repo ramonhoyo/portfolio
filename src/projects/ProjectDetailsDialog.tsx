@@ -1,4 +1,5 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Tooltip, useMediaQuery, useTheme } from '@mui/material'
+import Image from 'next/image';
 import React, { useEffect } from 'react'
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
@@ -50,7 +51,7 @@ export default function ProjectDetailsDialog(props: Props) {
         <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
           {data?.tags.map((tag: string) => (
             <Tooltip title={tag} key={tag}>
-              <img alt={tag} height="64" width="64" src={`https://cdn.simpleicons.org/${tag}`} />
+              <Image alt={tag} height="64" width="64" src={`https://cdn.simpleicons.org/${tag}`} />
             </Tooltip>
           ))}
         </Box>

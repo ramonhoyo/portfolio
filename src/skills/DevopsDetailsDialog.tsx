@@ -9,6 +9,7 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import DevopsRadarComponent from './DevopsRadarComponent';
 import InfiniteLooper from '@/components/InfiniteLooper';
+import Image from 'next/image';
 
 const icons = [
   "github",
@@ -79,7 +80,7 @@ export default function DevopsDetailsDialog(props: Props) {
           <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
             <InfiniteLooper speed={200} direction='left'>
               {icons.map((it, idx) => (
-                <img
+                <Image
                   key={`${it}-${idx}`}
                   alt={it}
                   height={32}

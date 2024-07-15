@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Image from 'next/image';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -98,7 +99,7 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
           <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
             <InfiniteLooper speed={200} direction='left'>
               {icons.map((it, idx) => (
-                <img
+                <Image
                   key={`${it}-${idx}`}
                   alt={it}
                   height={32}

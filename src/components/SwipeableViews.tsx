@@ -10,6 +10,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Image from 'next/image';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -47,14 +48,17 @@ function SwipeableTextMobileStepper({ imgs, height }: SwipeableTextMobileStepper
         {imgs.map((step, index) => (
           <div key={index}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img
-                height={height || 255}
+              <Image
+                height={0}
+                width={0}
+                sizes="100vw"
                 style={{
                   height: height || 255,
                   display: 'block',
                   objectFit: 'contain',
                   overflow: 'hidden',
                   width: '100%',
+                  maxHeight: height || 255,
                 }}
                 src={step}
                 alt={step}

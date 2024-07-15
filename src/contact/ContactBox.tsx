@@ -53,7 +53,7 @@ export default function ContactBox(props: Props) {
         <Box sx={{ display: 'flex', justifyContent: 'center', }}>
           {data.map((item) => (
             <IconButton href={item.link} key={item.link}>
-              <img width={32} height={32} src={`https://cdn.simpleicons.org/${item.icon}/`} />
+              <Image alt={item.text} width={32} height={32} src={`https://cdn.simpleicons.org/${item.icon}/`} />
             </IconButton>
           ))}
         </Box>
