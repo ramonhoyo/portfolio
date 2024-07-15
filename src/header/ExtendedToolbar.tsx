@@ -110,7 +110,7 @@ function ResponsiveAppBar() {
             ))}
 
           </Box>
-          <Button href='mailto:rahoyo@outlook.com' sx={{ color: 'white' }} variant='outlined'>Write me</Button>
+          <Button href='/cv.pdf' sx={{ color: 'white' }} variant='outlined'>Download CV</Button>
         </Toolbar>
       </Container>
     </AppBar>
