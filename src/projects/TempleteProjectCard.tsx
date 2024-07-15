@@ -59,7 +59,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
         <SwipeableTextMobileStepper imgs={imgs} />
 
         <CardContent
-          sx={{ p: 2, maxHeight: 300, overflowY: 'hidden', position: 'relative' }}
+          sx={{ p: 2, maxHeight: 250, overflowY: 'hidden', position: 'relative' }}
         >
           <MarkdownPreview source={description} style={{ background: 'white', color: 'black' }} />
 
@@ -69,7 +69,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
               top: 0,
               left: 0,
               right: 0,
-              height: 300,
+              height: 250,
               bgcolor: 'rgba(1, 1, 1, 0.2)',
               display: 'flex',
               justifyContent: 'center',
