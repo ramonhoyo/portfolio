@@ -42,13 +42,7 @@ const theme = createTheme({
     MuiMobileStepper: {
       styleOverrides: {
         root: {
-          backgroundColor: '#8f4c38'
-        },
-        dot: {
-          backgroundColor: 'lightgray',
-        },
-        dotActive: {
-          backgroundColor: 'white',
+          backgroundColor: '#c8c8c8',
         },
       },
     },
