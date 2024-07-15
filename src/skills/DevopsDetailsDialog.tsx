@@ -5,11 +5,10 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import BackendChartComponent from './BackendChartComponent';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
-import FrontendRadarComponent from './FrontendRadarComponent';
 import DevopsRadarComponent from './DevopsRadarComponent';
+import InfiniteLooper from '@/components/InfiniteLooper';
 
 const icons = [
   "github",
@@ -78,15 +77,18 @@ export default function DevopsDetailsDialog(props: Props) {
           <DevopsRadarComponent />
 
           <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
-            {icons.map((icon) => (
-              <img
-                key={icon}
-                alt={icon}
-                height="64"
-                width="64"
-                src={`https://cdn.simpleicons.org/${icon}/`}
-              />
-            ))}
+            <InfiniteLooper speed={200} direction='left'>
+              {icons.map((it, idx) => (
+                <img
+                  key={`${it}-${idx}`}
+                  alt={it}
+                  height={32}
+                  width={32}
+                  style={{ margin: 32 }}
+                  src={`https://cdn.simpleicons.org/${it}/`}
+                />
+              ))}
+            </InfiniteLooper>
           </Box>
 
           <Box sx={{ p: 2 }}>

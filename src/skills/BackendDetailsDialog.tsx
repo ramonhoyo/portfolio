@@ -10,8 +10,18 @@ import BackendChartComponent from './BackendChartComponent';
 import Markdown from 'react-markdown';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import SwipeableTextMobileStepper from '@/components/SwipeableViews';
+import InfiniteLooper from '@/components/InfiniteLooper';
 
-
+const imgs = [
+  "https://cdn.simpleicons.org/swagger/",
+  "https://cdn.simpleicons.org/redis/",
+  "https://cdn.simpleicons.org/mongodb/",
+  "https://cdn.simpleicons.org/nestjs/",
+  "https://cdn.simpleicons.org/graphql/",
+  "https://cdn.simpleicons.org/typescript/",
+  "https://cdn.simpleicons.org/typeorm/",
+];
 const markdown = `
 ## NestJS Framework
 
@@ -86,15 +96,19 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
 
         <BackendChartComponent />
 
-
         <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
-          <img alt="swagger" height="64" width="64" src="https://cdn.simpleicons.org/swagger/" />
-          <img alt="redis" height="64" width="64" src="https://cdn.simpleicons.org/redis/" />
-          <img alt="mongodb" height="64" width="64" src="https://cdn.simpleicons.org/mongodb/" />
-          <img alt="nestjs" height="64" width="64" src="https://cdn.simpleicons.org/nestjs/" />
-          <img alt="graphql" height="64" width="64" src="https://cdn.simpleicons.org/graphql/" />
-          <img alt="typescript" height="64" width="64" src="https://cdn.simpleicons.org/typescript/" />
-          <img alt="typeorm" height="64" width="64" src="https://cdn.simpleicons.org/typeorm/" />
+          <InfiniteLooper speed={200} direction='left'>
+            {imgs.map((it, idx) => (
+              <img
+                key={`${it}-${idx}`}
+                alt={it}
+                height={32}
+                width={32}
+                style={{ margin: 32 }}
+                src={it}
+              />
+            ))}
+          </InfiniteLooper>
         </Box>
 
         <Box sx={{ p: 2 }}>

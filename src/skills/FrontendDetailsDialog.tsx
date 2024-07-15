@@ -8,6 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import FrontendRadarComponent from './FrontendRadarComponent';
+import InfiniteLooper from '@/components/InfiniteLooper';
 
 const icons = [
   "formik",
@@ -95,15 +96,18 @@ export default function BackendDetailsDialog(props: BackendDetailsDialogProps) {
           <FrontendRadarComponent />
 
           <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
-            {icons.map((icon) => (
-              <img
-                key={icon}
-                alt={icon}
-                height="64"
-                width="64"
-                src={`https://cdn.simpleicons.org/${icon}/`}
-              />
-            ))}
+            <InfiniteLooper speed={200} direction='left'>
+              {icons.map((it, idx) => (
+                <img
+                  key={`${it}-${idx}`}
+                  alt={it}
+                  height={32}
+                  width={32}
+                  style={{ margin: 32 }}
+                  src={`https://cdn.simpleicons.org/${it}/`}
+                />
+              ))}
+            </InfiniteLooper>
           </Box>
 
           <Box sx={{ p: 2 }}>
