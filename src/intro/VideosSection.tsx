@@ -83,7 +83,7 @@ export default function VideosSection() {
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
           <video
             src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161281/porfolio/front.mp4'
-            src='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_266/v1721161281/porfolio/front.jpg'
+            poster='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_266/v1721161281/porfolio/front.jpg'
             autoPlay={index === 2}
             loop
             width={400}
