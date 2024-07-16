@@ -31,12 +31,6 @@ const theme = createTheme({
         root: {
           textTransform: 'none',
         },
-        outlined: {
-          borderRadius: 16,
-        },
-        contained: {
-          borderRadius: 16,
-        },
       },
     },
     MuiMobileStepper: {

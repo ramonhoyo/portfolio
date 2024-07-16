@@ -14,10 +14,11 @@ const data = [
 export type Props = {
   size?: 'small' | 'medium' | 'large'
   hideName?: boolean;
+  hideEmailButton?: boolean;
 }
 
 export default function ContactBox(props: Props) {
-  const { size, hideName } = props;
+  const { size, hideName, hideEmailButton } = props;
 
   let sizePx = 126;
   switch (size) {
@@ -45,7 +46,7 @@ export default function ContactBox(props: Props) {
         <Typography variant='subtitle1'>Fullstack Developer</Typography>
       </Grid>
 
-      <Grid item xs={12} sx={{ display: 'fkex', justifyContent: 'center' }}>
+      <Grid item xs={12} sx={{ display: hideEmailButton ? 'none' : 'flex', justifyContent: 'center' }}>
         <Button href='mailto:rahoyo@outlook.com' variant='contained'>Send me an email</Button>
       </Grid>
 
