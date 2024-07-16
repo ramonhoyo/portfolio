@@ -39,7 +39,8 @@ export default function IntroSection() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState(true);
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down('md'))
+  const downMd = useMediaQuery(theme.breakpoints.down('md'))
+  const isSm = useMediaQuery(theme.breakpoints.only('sm'))
 
   return (
     <Box sx={{ bgcolor: 'white', mt: 0 }}>
@@ -75,9 +76,10 @@ export default function IntroSection() {
                       zIndex: 1,
                       width: '100%',
                       position: 'absolute',
-                      top: isXs ? 96 : 64,
+                      top: downMd ? 96 : 64,
                     }}
                   />
+
 
                   <IntroSSRText />
                   <br />
@@ -97,7 +99,7 @@ export default function IntroSection() {
                 </Stack>
               </Grid>
 
-              <Grid item xs={12} md={6} sx={{ mt: isXs ? 32 : 16, position: 'relative' }}>
+              <Grid item xs={12} md={6} sx={{ mt: isSm ? 64 : downMd ? 32 : 16, position: 'relative' }}>
                 <Box sx={{ height: 450 }} />
                 <VideosSection />
               </Grid>
@@ -189,7 +191,7 @@ export default function IntroSection() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} sx={{ mt: isXs ? 0 : 16 }}>
+          <Grid item xs={12} sx={{ mt: downMd ? 0 : 16 }}>
             <IntroAccordion />
           </Grid>
           <Grid item xs={12} md={5} container spacing={2}>

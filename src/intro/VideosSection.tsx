@@ -89,7 +89,6 @@ export default function VideosSection() {
             width={400}
             height={400}
           />
-
           <Typography color="primary" variant='h4'>Frontend Development</Typography>
         </Stack>
       </Zoom>
