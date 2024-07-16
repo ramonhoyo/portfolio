@@ -88,3 +88,37 @@ a {
   animation: none;
 }
 
+
+@keyframes iterateVisibility {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes iterateVisibility  {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes iterateVisibility {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.run-interate-visibility {
+  animation: iterateVisibility 1s linear infinite ;
+  -moz-animation: iterateVisibility 1s linear infinite ;
+  -webkit-animation: iterateVisibility 1s linear infinite ;
+}
+

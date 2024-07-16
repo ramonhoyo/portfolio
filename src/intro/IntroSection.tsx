@@ -12,6 +12,7 @@ import Image from 'next/image';
 import In from '@/components/In';
 import InfiniteLooper from '@/components/InfiniteLooper';
 import VideosSection from './VideosSection';
+import DynamicText from '@/components/DynamicText';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -77,9 +78,7 @@ export default function IntroSection() {
           <Grid item xs={12}>
             <Grid container>
               <Grid item xs={12} md={6}>
-                <Typography variant="h3" color="primary">
-                  Software Architect & Fullstack
-                </Typography>
+                <DynamicText variant='h2' color='primary' texts={["Software Architect", "Fullstack Developer"]} />
 
                 <Stack direction='row' spacing={1}>
                   <Chip icon={<MyLocationIcon color='primary' />} label="Mérida, Venezuela" variant="outlined" />
