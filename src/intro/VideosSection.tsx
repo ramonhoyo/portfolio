@@ -12,7 +12,6 @@ export default function VideosSection() {
   const ref4 = useRef<HTMLVideoElement>(null);
 
   const handleInterval = () => {
-    console.log('handle interval called, index: ', index);
     const nextIndex = index + 1 < len ? index + 1 : 0;
     ref1?.current?.pause();
     ref2?.current?.pause();

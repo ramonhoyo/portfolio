@@ -6,11 +6,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
 import CssBaseline from '@mui/material/CssBaseline';
 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
-
 export const metadata: Metadata = {
   title: "Ramón Hoyo",
   description: "Porfolio",
@@ -26,7 +21,9 @@ export default function RootLayout({
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <body className={roboto.className}>{children}</body>
+          <body>
+            {children}
+          </body>
         </ThemeProvider>
       </AppRouterCacheProvider>
     </html>

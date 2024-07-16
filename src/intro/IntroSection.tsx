@@ -2,46 +2,16 @@
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ElderlyIcon from '@mui/icons-material/Elderly';
-import ContactBox from "@/contact/ContactBox";
-import { Box, Button, Chip, Collapse, Container, Grid, Grow, Stack, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
-import { Sacramento } from 'next/font/google';
+import { Box, Button, Chip, Collapse, Container, Grid, Stack, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
 import Image from 'next/image';
-import In from '@/components/In';
-import InfiniteLooper from '@/components/InfiniteLooper';
 import VideosSection from './VideosSection';
 import DynamicText from '@/components/DynamicText';
+import dynamic from 'next/dynamic'
 
-const sacramento = Sacramento({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap'
-});
-
-const imgs = [
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/1.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/2.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/3.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/4.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/5.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/6.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/7.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/8.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/9.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/10.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/11.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/12.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/13.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/14.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/15.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/16.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/17.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/18.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/19.jpg?raw=true',
-  'https://github.com/ramonhoyo/portfolio-screenshots/blob/main/bspay/20.jpg?raw=true',
-];
+const IntroSSRText = dynamic(() => import('../components/IntroTextNoSSR'), { ssr: false })
 
 const mernStack = [
   { title: 'Mongo DB', name: 'mongodb', fill: '#47A248' },
@@ -102,22 +72,15 @@ export default function IntroSection() {
                     sizes='100vw'
                     src="/art/03.svg"
                     style={{
+                      zIndex: 1,
                       width: '100%',
                       position: 'absolute',
                       top: isXs ? 96 : 64,
                     }}
                   />
 
-                  <Typography variant="h4" sx={{ fontSize: '2rem', zIndex: 2 }}>
-                    After <In>eight</In> years as a software developer <In>creating IT</In> solutions,
-                    I&apos;m excited and ready to <In>help you</In> turn your ideas into reality.
-                    <Typography sx={{ display: 'contents', fontSize: '2.5rem' }} variant="h4">
-                      {" "}Are you ready to <Typography sx={{ display: 'contents', fontSize: '2.5rem' }} color='primary' variant="h4">get started?</Typography>
-                    </Typography>
-                  </Typography>
-
+                  <IntroSSRText />
                   <br />
-
 
                 </Grid>
                 <Stack spacing={2} direction='row' justifyContent='flex-end'>

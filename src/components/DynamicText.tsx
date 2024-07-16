@@ -41,10 +41,6 @@ export default function DynamicText(props: DynamicTextProps) {
     return () => clearInterval(interval);
   }, [textStacks, index, pos]);
 
-  useEffect(() => {
-    console.log('result index: ', index, 'pos: ', pos, 'textStacks: ', textStacks[index]);
-  }, [index, pos, textStacks]);
-
   return (
     <div>
       <Typography variant={variant} color={color}>
