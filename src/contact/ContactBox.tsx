@@ -47,7 +47,7 @@ export default function ContactBox(props: Props) {
       </Grid>
 
       <Grid item xs={12} sx={{ display: hideEmailButton ? 'none' : 'flex', justifyContent: 'center' }}>
-        <Button href='mailto:rahoyo@outlook.com' variant='contained'>Send me an email</Button>
+        <Button href='mailto:rahoyo@outlook.com' color='secondary' variant='contained'>Send me an email</Button>
       </Grid>
 
       <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>

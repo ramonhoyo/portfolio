@@ -12,8 +12,8 @@ export default function Home() {
 
       <IntroSection />
       <Profile />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </main>
   );

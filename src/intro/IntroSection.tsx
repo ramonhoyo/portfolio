@@ -67,10 +67,11 @@ export default function IntroSection() {
                     <Button
                       sx={{ height: 'min-content' }}
                       onClick={() => setExpanded(!expanded)}
+                      href='mailto:rahoyo@outlook.com'
                       variant="contained"
-                      color='primary'
+                      color='secondary'
                     >
-                      I&apos;m ready
+                      Lets connect
                     </Button>
                   </Zoom>
                 </Stack>

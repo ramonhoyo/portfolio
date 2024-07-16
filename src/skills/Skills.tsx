@@ -91,7 +91,7 @@ export default function Skills() {
 
       <Container maxWidth="lg">
         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Typography color='primary' variant='h1' sx={{ ...sacramento.style, fontStyle: 'bold' }}>
+          <Typography color='secondary' variant='h1' sx={{ ...sacramento.style, fontStyle: 'bold' }}>
             Tecnologies
           </Typography>
         </Grid>
@@ -101,7 +101,7 @@ export default function Skills() {
         <Grid item xs={12} container spacing={4}>
           <Grid item xs={12} sm={6} lg={4}>
             <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-              <Typography variant="h2" color="primary">
+              <Typography variant="h4" color="primary">
                 Main Stack
               </Typography>
             </Grid>
@@ -131,7 +131,7 @@ export default function Skills() {
 
           <Grid item xs={12} sm={6} lg={4}>
             <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-              <Typography variant="h2" color="primary">
+              <Typography variant="h4" color="primary">
                 Languages
               </Typography>
             </Grid>
@@ -157,7 +157,7 @@ export default function Skills() {
 
           <Grid item xs={12} lg={4}>
             <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-              <Typography variant="h2" color="primary" >
+              <Typography variant="h4" color="primary" >
                 Tools
               </Typography>
             </Grid>
