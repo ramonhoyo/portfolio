@@ -3,7 +3,7 @@ import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ElderlyIcon from '@mui/icons-material/Elderly';
 import ContactBox from "@/contact/ContactBox";
-import { Box, Button, Chip, Collapse, Container, Grid, Stack, Tooltip, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Grow, Stack, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import { Sacramento } from 'next/font/google';
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
@@ -11,6 +11,7 @@ import IntroAccordion from "./IntroAccordion";
 import Image from 'next/image';
 import In from '@/components/In';
 import InfiniteLooper from '@/components/InfiniteLooper';
+import VideosSection from './VideosSection';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -104,13 +105,13 @@ export default function IntroSection() {
                     style={{
                       width: '100%',
                       position: 'absolute',
-                      top: 64,
+                      top: isXs ? 96 : 64,
                     }}
                   />
 
                   <Typography variant="h4" sx={{ fontSize: '2rem', zIndex: 2 }}>
                     After <In>eight</In> years as a software developer <In>creating IT</In> solutions,
-                    I'm excited and ready to <In>help you</In> turn your ideas into reality.
+                    I&apos;m excited and ready to <In>help you</In> turn your ideas into reality.
                     <Typography sx={{ display: 'contents', fontSize: '2.5rem' }} variant="h4">
                       {" "}Are you ready to <Typography sx={{ display: 'contents', fontSize: '2.5rem' }} color='primary' variant="h4">get started?</Typography>
                     </Typography>
@@ -121,15 +122,22 @@ export default function IntroSection() {
 
                 </Grid>
                 <Stack spacing={2} direction='row' justifyContent='flex-end'>
-                  <Button
-                    sx={{ height: 'min-content' }}
-                    onClick={() => setExpanded(!expanded)}
-                    variant="contained"
-                    color='primary'
-                  >
-                    I'm ready
-                  </Button>
+                  <Zoom in={true} style={{ transitionDelay: '1000ms' }}>
+                    <Button
+                      sx={{ height: 'min-content' }}
+                      onClick={() => setExpanded(!expanded)}
+                      variant="contained"
+                      color='primary'
+                    >
+                      I&apos;m ready
+                    </Button>
+                  </Zoom>
                 </Stack>
+              </Grid>
+
+              <Grid item xs={12} md={6} sx={{ mt: isXs ? 32 : 16, position: 'relative' }}>
+                <Box sx={{ height: 450 }} />
+                <VideosSection />
               </Grid>
 
               <Grid sx={{ display: 'none' }} item md={6} xs={12} container spacing={4}>
@@ -219,7 +227,7 @@ export default function IntroSection() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} sx={{ mt: 32 }}>
+          <Grid item xs={12} sx={{ mt: isXs ? 0 : 16 }}>
             <IntroAccordion />
           </Grid>
           <Grid item xs={12} md={5} container spacing={2}>
@@ -231,7 +239,7 @@ export default function IntroSection() {
 
         <IntroDetailsDialog open={open} setOpen={setOpen} />
       </Container>
-    </Box>
+    </Box >
 
   );
 }
