@@ -43,25 +43,54 @@ export default function VideosSection() {
     <Box position='absolute' left={0} right={0} bottom={0} top={0}>
       <Zoom in={index === 0} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
-          <video ref={ref1} src='/art/app-development.mp4' autoPlay={index === 0} loop width={400} height={400}></video>
+          <video
+            poster='https://res.cloudinary.com/ramonhoyo/video/upload/h_256,w_266/v1721161282/porfolio/app-development.jpg'
+            src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161282/porfolio/app-development.mp4'
+            autoPlay={index === 0}
+            loop
+            width={400}
+            height={400}
+          />
           <Typography color="primary" variant='h4'>Mobile Development</Typography>
         </Stack>
       </Zoom>
       <Zoom in={index === 1} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
-          <video ref={ref2} src='/art/blockchain.mp4' autoPlay={index === 1} loop width={400} height={400}></video>
+          <video
+            src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161282/porfolio/blockchain.mp4'
+            poster='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_256/v1721161282/porfolio/blockchain.jpg'
+            autoPlay={index === 1}
+            loop
+            width={400}
+            height={400}
+          />
           <Typography color="primary" variant='h4'>Blockchain Development</Typography>
         </Stack>
       </Zoom>
       <Zoom in={index === 2} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
-          <video ref={ref3} src='/art/cloud.mp4' autoPlay={index === 1} loop width={400} height={400}></video>
+          <video
+            poster="https://res.cloudinary.com/ramonhoyo/video/upload/h_256,w_276/v1721161281/porfolio/cloud.jpg"
+            src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161281/porfolio/cloud.mp4'
+            autoPlay={index === 1}
+            loop
+            width={400}
+            height={400}
+          />
           <Typography color="primary" variant='h4'>Backend Development</Typography>
         </Stack>
       </Zoom>
       <Zoom in={index === 3} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
-          <video ref={ref4} src='/art/front.mp4' autoPlay={index === 2} loop width={400} height={400}></video>
+          <video
+            src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161281/porfolio/front.mp4'
+            src='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_266/v1721161281/porfolio/front.jpg'
+            autoPlay={index === 2}
+            loop
+            width={400}
+            height={400}
+          />
+
           <Typography color="primary" variant='h4'>Frontend Development</Typography>
         </Stack>
       </Zoom>
