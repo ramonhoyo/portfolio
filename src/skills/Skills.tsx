@@ -72,7 +72,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
     <InfiniteLooper speed={200} direction={direction}>
       {[...icons, ...icons, ...icons].map((it, idx) => (
         <Image
-          key={it}
+          key={`${it}-${idx}`}
           alt={it}
           height={32}
           width={32}

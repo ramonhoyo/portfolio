@@ -9,9 +9,7 @@ import IntroAccordion from "./IntroAccordion";
 import Image from 'next/image';
 import VideosSection from './VideosSection';
 import DynamicText from '@/components/DynamicText';
-import dynamic from 'next/dynamic'
-
-const IntroSSRText = dynamic(() => import('../components/IntroTextNoSSR'), { ssr: false })
+import IntroTextNoSSR from '@/components/IntroTextNoSSR';
 
 export default function IntroSection() {
   const [open, setOpen] = useState(false);
@@ -49,16 +47,18 @@ export default function IntroSection() {
                     width={0}
                     height={500}
                     sizes='100vw'
-                    src="/art/03.svg"
+                    priority={true}
+                    src="https://res.cloudinary.com/ramonhoyo/image/upload/w_600/h_400/v1721161282/porfolio/03.svg"
                     style={{
                       zIndex: 1,
                       width: '100%',
+                      height: 'auto',
                       position: 'absolute',
-                      top: downMd ? 128 : 96,
+                      top: downMd ? '90%' : '60%',
                     }}
                   />
 
-                  <IntroSSRText />
+                  <IntroTextNoSSR />
                   <br />
 
                 </Grid>
