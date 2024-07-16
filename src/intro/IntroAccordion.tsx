@@ -113,7 +113,7 @@ As Team Lead, I was responsible for design, plan, execute and integrate these mo
 export default function IntroAccordion() {
   const theme = useTheme();
   const full = useMediaQuery(theme.breakpoints.down('md'));
-  const [expanded, setExpanded] = React.useState<string | false>('who-am-i');
+  const [expanded, setExpanded] = React.useState<string | false>(full ? false : 'who-am-i');
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -124,6 +124,7 @@ export default function IntroAccordion() {
     <div>
       {sections.map(it => (
         <Accordion
+          id="about-me"
           key={it.id}
           expanded={expanded === it.id}
           onChange={handleChange(it.id)}

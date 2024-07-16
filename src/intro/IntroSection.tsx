@@ -13,28 +13,6 @@ import dynamic from 'next/dynamic'
 
 const IntroSSRText = dynamic(() => import('../components/IntroTextNoSSR'), { ssr: false })
 
-const mernStack = [
-  { title: 'Mongo DB', name: 'mongodb', fill: '#47A248' },
-  { title: 'Express', name: 'express', fill: '#00000' },
-  { title: 'React', name: 'react', fill: '#61DAFB' },
-  { title: 'Node', name: 'nodedotjs', fill: '#5FA04E' },
-];
-
-const lansStack = [
-  { title: 'Golang', name: 'go', fill: '#00ADD8' },
-  { title: 'Typescript', name: 'typescript', fill: '#3366CC' },
-  { title: 'SQL (MySQL, Postgres, SQLite)', name: 'sqlite', fill: '#4479A1' },
-  { title: 'Kotlin', name: 'kotlin', fill: '#7F52FF' },
-  { title: 'C/C++', name: 'cplusplus', fill: '#00599C' },
-];
-
-const toolsStack = [
-  { title: 'Neovim', name: 'Neovim', fill: '#00ADD8' },
-  { title: 'Git', name: 'git', fill: '#3366CC' },
-  { title: 'Linux', name: 'linux', fill: '#4479A1' },
-  { title: 'Drawio', name: 'diagramsdotnet', fill: '#7F52FF' },
-  { title: 'Docker', name: 'docker', fill: '#00599C' },
-];
 export default function IntroSection() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState(true);
@@ -76,10 +54,9 @@ export default function IntroSection() {
                       zIndex: 1,
                       width: '100%',
                       position: 'absolute',
-                      top: downMd ? 96 : 64,
+                      top: downMd ? 128 : 96,
                     }}
                   />
-
 
                   <IntroSSRText />
                   <br />
@@ -102,91 +79,6 @@ export default function IntroSection() {
               <Grid item xs={12} md={6} sx={{ mt: isSm ? 64 : downMd ? 32 : 16, position: 'relative' }}>
                 <Box sx={{ height: 450 }} />
                 <VideosSection />
-              </Grid>
-
-              <Grid sx={{ display: 'none' }} item md={6} xs={12} container spacing={4}>
-                <Grid item xs={12}>
-                  <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-                    <Typography variant="h2" color="primary">
-                      Main Stack
-                    </Typography>
-                  </Grid>
-
-                  <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-                    {mernStack.map(it => (
-                      <Tooltip key={it.name} title={it.title}>
-                        <Grid
-                          key={it.name}
-                          item
-                          sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
-                        >
-                          <Image
-                            alt={it.title}
-                            height="64"
-                            width="64"
-                            src={`https://cdn.simpleicons.org/${it.name}`}
-                          />
-                          <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
-                            {it.name.substring(0, 1)}
-                          </Typography>
-                        </Grid>
-                      </Tooltip>
-                    ))}
-                  </Grid>
-                </Grid>
-
-                <Grid item xs={12}>
-                  <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-                    <Typography variant="h2" color="primary">
-                      Languages
-                    </Typography>
-                  </Grid>
-
-                  <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-                    {lansStack.map(it => (
-                      <Tooltip key={it.name} title={it.title}>
-                        <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                          <Image
-                            alt={it.name}
-                            height="64"
-                            width="64"
-                            src={`https://cdn.simpleicons.org/${it.name}`}
-                          />
-                          <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
-                            {it.name.substring(0, 1)}
-                          </Typography>
-                        </Grid>
-                      </Tooltip>
-                    ))}
-                  </Grid>
-                </Grid>
-
-
-                <Grid item xs={12}>
-                  <Grid item xs={12} sx={{ justifyContent: 'center', display: 'flex' }}>
-                    <Typography variant="h2" color="primary" >
-                      Tools
-                    </Typography>
-                  </Grid>
-
-                  <Grid container item xs={12} spacing={2} sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-                    {toolsStack.map(it => (
-                      <Tooltip key={it.name} title={it.title}>
-                        <Grid key={it.name} item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                          <Image
-                            alt={it.name}
-                            height="64"
-                            width="64"
-                            src={`https://cdn.simpleicons.org/${it.name}`}
-                          />
-                          <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
-                            {it.name.substring(0, 1)}
-                          </Typography>
-                        </Grid>
-                      </Tooltip>
-                    ))}
-                  </Grid>
-                </Grid>
               </Grid>
             </Grid>
           </Grid>

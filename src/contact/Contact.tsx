@@ -4,7 +4,7 @@ import ContactBox from './ContactBox';
 
 export default function Contact() {
   return (
-    <Box sx={{ my: 2, p: 2 }}>
+    <Box id="contact" sx={{ my: 2, p: 2 }}>
       <Box sx={{ textAlign: 'center' }} hidden>
         <Typography variant='h5'>Thanks you for visiting this page</Typography>
       </Box>

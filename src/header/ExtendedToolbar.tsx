@@ -10,26 +10,27 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Sacramento } from 'next/font/google';
 
-const sacramento = Sacramento({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap'
-});
-
-const pages = ['About me', 'Skills', 'Portfolio', 'Contact'];
+const data = [
+  {
+    title: 'About me',
+    href: '#about-me'
+  },
+  {
+    title: 'Skills',
+    href: '#skills',
+  },
+  {
+    title: 'Portfolio',
+    href: '#portfolio',
+  },
+  {
+    title: 'Contact',
+    href: '#contact',
+  },
+];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   return (
     <AppBar position="static">
@@ -38,53 +39,15 @@ function ResponsiveAppBar() {
           <Typography
             variant="h4"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               textDecoration: 'none',
             }}
           >
-            @RAHOYO
+            @rahoyo
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
           <Typography
             variant="h4"
             noWrap
@@ -99,16 +62,16 @@ function ResponsiveAppBar() {
             @rahoyo
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {data.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.href}
+                href={page.href}
+                onClick={() => { }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
-
           </Box>
           <Button href='/cv.pdf' sx={{ color: 'white' }} variant='outlined'>Download CV</Button>
         </Toolbar>
