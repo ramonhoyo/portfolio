@@ -4,11 +4,19 @@ import Skills from "@/skills/Skills";
 import Profile from "@/profile/Profile";
 import Contact from "@/contact/Contact";
 import dynamic from 'next/dynamic';
-import { Fab, Portal, useMediaQuery, useTheme, Zoom } from "@mui/material";
-import { ConnectWithoutContact } from "@mui/icons-material";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import {
+  PictureAsPdf as PictureAsPdfIcon,
+  Email as EmailIcon,
+} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 
 const Projects = dynamic(() => import('../projects/Projects'), { ssr: false })
+
+const actions = [
+  { icon: <PictureAsPdfIcon />, name: 'CV', href: '/cv.pdf', },
+  { icon: <EmailIcon />, name: 'Send email', href: 'mailto:rahoyo@outlook.com' }
+];
 
 export default function Home() {
   const theme = useTheme();
@@ -19,7 +27,8 @@ export default function Home() {
 
   useEffect(() => {
     const handler = () => {
-      const direction = window.scrollY > scrollPosition ? 'down' : 'up';
+      let direction = window.scrollY > scrollPosition ? 'down' : 'up';
+      direction = window.scrollY < 200 ? 'up' : direction;
       setScrollDirection(direction);
       setScrollPosition(window.scrollY);
     };
@@ -45,25 +54,23 @@ export default function Home() {
       <Contact />
 
       {isXs && (
-        <Portal>
-          <Zoom
-            in={scrollDirection === 'up' && initialFabDelay}
-            style={{
-              position: 'fixed',
-              bottom: 32,
-              right: 32,
-            }}>
-            <Fab
-              size='large'
-              color="primary"
-              aria-label="contact"
-              href="mailto:rahoyo@outlook.com"
-            >
-              <ConnectWithoutContact />
-            </Fab>
-          </Zoom>
-        </Portal>
+        <Zoom in={initialFabDelay && scrollDirection === 'up'}>
+          <SpeedDial
+            ariaLabel="SpeedDial basic example"
+            sx={{ position: 'fixed', bottom: 32, right: 32 }}
+            icon={<SpeedDialIcon />}
+          >
+            {actions.map((action) => (
+              <SpeedDialAction
+                key={action.name}
+                onClick={() => window.open(action.href)}
+                icon={action.icon}
+                tooltipTitle={action.name}
+              />
+            ))}
+          </SpeedDial>
+        </Zoom>
       )}
-    </main>
+    </main >
   );
 }

@@ -58,7 +58,7 @@ Manage your funds safely and reliably with BSPay Wallet, giving you the protecti
   },
   {
     title: 'Ciphertop Desktop (Windows, MacOS)',
-    icon: 'https://i0.wp.com/cyphertop.com/wp-content/uploads/2021/03/cypher.png?resize=150%2C150&ssl=1',
+    icon: 'https://res.cloudinary.com/ramonhoyo/image/upload/v1721281694/cft_icon.png',
     subtitle: 'Encryption application build with ElectronJS',
     tags: ['react', 'redux', 'electron', 'typescript', 'c++', 'webrtc', 'gitlab'],
     description: `
@@ -123,8 +123,7 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
 [Github repo](https://github.com/ramonhoyo/disructive-mern-test)
 [Live Demo](https://mellow-acceptance-production.up.railway.app/)
 `,
-    cover: 'https://picsum.photos/seed/project-2/300/200',
-    icon: '/screenshots/media/disruptive.png',
+    icon: 'https://res.cloudinary.com/ramonhoyo/image/upload/v1721281973/disruptive-logo.png',
     imgs: [
       '/screenshots/media/01.png',
       '/screenshots/media/02.png',
@@ -137,7 +136,7 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
   },
   {
     title: 'Cyphertop Android',
-    icon: 'https://i0.wp.com/cyphertop.com/wp-content/uploads/2021/03/cypher.png?resize=150%2C150&ssl=1',
+    icon: 'https://res.cloudinary.com/ramonhoyo/image/upload/v1721281694/cft_icon.png',
     subtitle: 'Encryption application for Android with custom encryption algorithm.',
     tags: ['android', 'androidstudio', 'gitlab', 'kotlin', 'c++', 'webrtc'],
     description: `
