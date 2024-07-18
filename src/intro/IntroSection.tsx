@@ -2,7 +2,7 @@
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ElderlyIcon from '@mui/icons-material/Elderly';
-import { Box, Button, Chip, Collapse, Container, Grid, Stack, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Stack, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
@@ -25,7 +25,13 @@ export default function IntroSection() {
           <Grid item xs={12}>
             <Grid container>
               <Grid item xs={12} md={6}>
-                <DynamicText variant='h2' color='primary' texts={["Software Architect", "Fullstack Developer"]} />
+                <DynamicText
+                  reverse
+                  loop
+                  variant='h2'
+                  color='primary'
+                  texts={["Software Architect", "Fullstack Developer"]}
+                />
 
                 <Stack direction='row' spacing={1}>
                   <Chip icon={<MyLocationIcon color='primary' />} label="Mérida, Venezuela" variant="outlined" />
@@ -33,10 +39,10 @@ export default function IntroSection() {
                   <Chip icon={<ElderlyIcon color='primary' />} label="+7 years" variant="outlined" />
                 </Stack>
 
-                <br />
-                <br />
+
 
                 <Grid item xs={12} sx={{
+                  mt: 2,
                   position: 'relative',
                   zIndex: 0,
                   justifyContent: 'center',
@@ -54,32 +60,41 @@ export default function IntroSection() {
                       width: '100%',
                       height: 'auto',
                       position: 'absolute',
-                      top: downMd ? '90%' : '60%',
+                      top: downMd ? '90%' : '80%',
                     }}
                   />
 
                   <IntroTextNoSSR />
+
                   <br />
 
                 </Grid>
-                <Stack spacing={2} direction='row' justifyContent='flex-end'>
-                  <Zoom in={true} style={{ transitionDelay: '1000ms' }}>
-                    <Button
-                      sx={{ height: 'min-content' }}
-                      onClick={() => setExpanded(!expanded)}
-                      href='mailto:rahoyo@outlook.com'
-                      variant="contained"
-                      color='secondary'
-                    >
-                      Lets connect
-                    </Button>
-                  </Zoom>
-                </Stack>
               </Grid>
 
               <Grid item xs={12} md={6} sx={{ mt: isSm ? 64 : downMd ? 32 : 16, position: 'relative' }}>
                 <Box sx={{ height: 450 }} />
                 <VideosSection />
+
+                <Stack
+                  spacing={2}
+                  direction='row'
+                  justifyContent='center'
+                  sx={{
+                    mt: 4,
+                    display: { xs: 'none', sm: 'flex' }
+                  }}
+                >
+                  <Zoom in={true} style={{ transitionDelay: '3s' }}>
+                    <Button
+                      sx={{ height: 'min-content' }}
+                      onClick={() => setExpanded(!expanded)}
+                      href='mailto:rahoyo@outlook.com'
+                      variant="contained"
+                    >
+                      Let&apos;s connect
+                    </Button>
+                  </Zoom>
+                </Stack>
               </Grid>
             </Grid>
           </Grid>
@@ -97,6 +112,5 @@ export default function IntroSection() {
         <IntroDetailsDialog open={open} setOpen={setOpen} />
       </Container>
     </Box >
-
   );
 }

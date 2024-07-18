@@ -59,25 +59,16 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
         <SwipeableTextMobileStepper imgs={imgs} />
 
         <CardContent
-          sx={{ p: 2, maxHeight: 250, overflowY: 'hidden', position: 'relative' }}
+          sx={{
+            p: 2,
+            maxHeight: 250,
+            overflowY: 'hidden',
+            position: 'relative',
+            maskImage: 'linear-gradient(to bottom,black 10%,transparent 100%)',
+            display: { xs: 'none', sm: 'block' },
+          }}
         >
           <MarkdownPreview source={description} style={{ background: 'white', color: 'black' }} />
-
-          <Grow in={isHover}>
-            <Box sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 250,
-              bgcolor: 'rgba(1, 1, 1, 0.05)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <Button variant='contained' color='secondary' onClick={onSeeMore}>View more</Button>
-            </Box>
-          </Grow>
         </CardContent>
 
         <Divider />
@@ -97,10 +88,10 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
 
           <div style={{ flex: 1 }} />
 
-          <Button onClick={onSeeMore} color='secondary' variant="contained" >View more</Button>
+          <Button onClick={onSeeMore} variant='outlined'>Details</Button>
         </CardActions>
 
       </div>
-    </Card>
+    </Card >
   );
 }

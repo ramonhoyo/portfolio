@@ -70,6 +70,7 @@ function SwipeableTextMobileStepper({ imgs, height }: SwipeableTextMobileStepper
       <MobileStepper
         steps={maxSteps}
         position="static"
+        sx={{ display: { xs: 'none' } }}
         activeStep={activeStep}
         nextButton={
           <Button

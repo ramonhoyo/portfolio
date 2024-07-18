@@ -6,10 +6,13 @@ export type DynamicTextProps = {
   texts: string[];
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   color?: 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error' | 'initial';
+  loop?: boolean;
+  reverse?: boolean;
+  ms?: number;
 };
 
 export default function DynamicText(props: DynamicTextProps) {
-  const { texts, variant, color } = props;
+  const { texts, variant, color, loop, reverse, ms } = props;
   const [index, setIndex] = useState(0);
   const [pos, setPos] = useState(0);
 
@@ -30,7 +33,8 @@ export default function DynamicText(props: DynamicTextProps) {
   const textStacks = useMemo(() => {
     return texts.map((text) => {
       const subWords = text.split('').map((_, j) => text.substring(0, j + 1));
-      return [
+      const result = [
+        '',
         ...subWords,
         subWords[subWords.length - 1],
         subWords[subWords.length - 1],
@@ -38,22 +42,30 @@ export default function DynamicText(props: DynamicTextProps) {
         subWords[subWords.length - 1],
         subWords[subWords.length - 1],
         subWords[subWords.length - 1],
-        ...subWords.reverse()
       ];
+
+      if (reverse) {
+        return [...result, ...subWords.reverse(), '']
+      }
+
+      return result;
     });
   }, [texts]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (pos + 1 >= textStacks[index].length) {
+        if (!loop && index + 1 >= textStacks.length) {
+          return;
+        }
         setPos(0);
         setIndex(index + 1 >= textStacks.length ? 0 : index + 1);
         return;
       }
       setPos(pos + 1);
-    }, 120);
+    }, ms || 120);
     return () => clearInterval(interval);
-  }, [textStacks, index, pos]);
+  }, [textStacks, index, pos, ms]);
 
   return (
     <div style={{ position: 'relative' }}>

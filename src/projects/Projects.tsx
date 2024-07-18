@@ -62,7 +62,7 @@ Manage your funds safely and reliably with BSPay Wallet, giving you the protecti
     subtitle: 'Encryption application build with ElectronJS',
     tags: ['react', 'redux', 'electron', 'typescript', 'c++', 'webrtc', 'gitlab'],
     description: `
-Security application allow users to:
+**Security application allow users to:**
 
 - Add other users as friends
 - Create groups.
@@ -141,7 +141,9 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
     subtitle: 'Encryption application for Android with custom encryption algorithm.',
     tags: ['android', 'androidstudio', 'gitlab', 'kotlin', 'c++', 'webrtc'],
     description: `
-This is the Android version of Cyphertop application, a security application allow users to:
+**This is the Android version of Cyphertop application**
+
+A security application allow users to:
 
 - Add other users as friends.
 - Create groups.
@@ -208,7 +210,7 @@ Tecnical details:
     subtitle: 'Project to show stats related to crimes against women at CDMX, México',
     tags: ['react', 'chartdotjs', 'googlesheets', 'mapbox', 'typescript', 'github', 'vercel'],
     description: `
-Application to show feminicides and other crimes against women at México City.
+**Application to show feminicides and other crimes against women at México City.**
 
 Users can move over the map to see cases of:
 
