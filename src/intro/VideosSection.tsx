@@ -43,6 +43,8 @@ export default function VideosSection() {
       <Zoom in={index === 0} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
           <video
+            playsInline
+            disableRemotePlayback
             poster='https://res.cloudinary.com/ramonhoyo/video/upload/h_256,w_266/v1721161282/porfolio/app-development.jpg'
             src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161282/porfolio/app-development.mp4'
             autoPlay={index === 0}
@@ -56,6 +58,8 @@ export default function VideosSection() {
       <Zoom in={index === 1} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
           <video
+            playsInline
+            disableRemotePlayback
             src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161282/porfolio/blockchain.mp4'
             poster='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_256/v1721161282/porfolio/blockchain.jpg'
             autoPlay={index === 1}
@@ -69,6 +73,8 @@ export default function VideosSection() {
       <Zoom in={index === 2} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
           <video
+            playsInline
+            disableRemotePlayback
             poster="https://res.cloudinary.com/ramonhoyo/video/upload/h_256,w_276/v1721161281/porfolio/cloud.jpg"
             src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161281/porfolio/cloud.mp4'
             autoPlay={index === 1}
@@ -82,6 +88,8 @@ export default function VideosSection() {
       <Zoom in={index === 3} unmountOnExit >
         <Stack sx={{ position: 'absolute', left: '50%', marginLeft: '-200px' }} alignItems='center'>
           <video
+            playsInline
+            disableRemotePlayback
             src='https://res.cloudinary.com/ramonhoyo/video/upload/v1721161281/porfolio/front.mp4'
             poster='https://res.cloudinary.com/ramonhoyo/video/upload/w_256,h_266/v1721161281/porfolio/front.jpg'
             autoPlay={index === 2}
