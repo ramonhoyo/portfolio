@@ -2,7 +2,7 @@
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ElderlyIcon from '@mui/icons-material/Elderly';
-import { Box, Button, Chip, Collapse, Container, Grid, Stack, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Stack, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
@@ -16,8 +16,6 @@ export default function IntroSection() {
   const [expanded, setExpanded] = useState(true);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down('md'))
-  const isSm = useMediaQuery(theme.breakpoints.only('sm'))
-  const isXs = useMediaQuery(theme.breakpoints.only('xs'))
 
   return (
     <Box sx={{ bgcolor: 'white', mt: 0 }}>
@@ -45,9 +43,10 @@ export default function IntroSection() {
                 <Image
                   alt="main picture"
                   width={0}
+                  priority={true}
                   height={500}
                   sizes='100vw'
-                  src="https://res.cloudinary.com/ramonhoyo/image/upload/w_600/h_400/v1721161282/porfolio/03.svg"
+                  src="https://res.cloudinary.com/ramonhoyo/image/upload/w_900/h_800/v1721161282/porfolio/03.png"
                   style={{
                     width: '100%',
                     height: 'auto',
