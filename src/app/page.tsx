@@ -3,11 +3,10 @@ import IntroSection from "@/intro/IntroSection";
 import Skills from "@/skills/Skills";
 import Profile from "@/profile/Profile";
 import Contact from "@/contact/Contact";
-
 import dynamic from 'next/dynamic';
-import { Fab, Grow, Portal, Slide, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { Fab, Portal, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import { ConnectWithoutContact } from "@mui/icons-material";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Projects = dynamic(() => import('../projects/Projects'), { ssr: false })
 
@@ -57,7 +56,9 @@ export default function Home() {
             <Fab
               size='large'
               color="primary"
-              aria-label="contact">
+              aria-label="contact"
+              href="mailto:rahoyo@outlook.com"
+            >
               <ConnectWithoutContact />
             </Fab>
           </Zoom>
