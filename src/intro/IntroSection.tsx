@@ -31,6 +31,7 @@ export default function IntroSection() {
                   variant='h2'
                   color='primary'
                   texts={["Software Architect", "Fullstack Developer"]}
+                  adornment
                 />
 
                 <Stack direction='row' spacing={1}>

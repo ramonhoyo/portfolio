@@ -9,10 +9,11 @@ export type DynamicTextProps = {
   loop?: boolean;
   reverse?: boolean;
   ms?: number;
+  adornment?: boolean;
 };
 
 export default function DynamicText(props: DynamicTextProps) {
-  const { texts, variant, color, loop, reverse, ms } = props;
+  const { texts, variant, color, loop, reverse, ms, adornment } = props;
   const [index, setIndex] = useState(0);
   const [pos, setPos] = useState(0);
 
@@ -75,6 +76,7 @@ export default function DynamicText(props: DynamicTextProps) {
       <Typography
         variant={variant}
         color={color}
+        className={adornment ? 'under' : ''}
         sx={{
           position: 'absolute',
           left: 0,

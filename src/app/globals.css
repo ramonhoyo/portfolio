@@ -37,35 +37,29 @@ body {
 
 
 @keyframes iterateVisibility {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
-@-moz-keyframes iterateVisibility  {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes iterateVisibility {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+@-moz-keyframes iterateopacity  {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
+@-webkit-keyframes iterateopacity {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 
-.run-interate-visibility {
-  animation: iterateVisibility 1s linear infinite ;
-  -moz-animation: iterateVisibility 1s linear infinite ;
-  -webkit-animation: iterateVisibility 1s linear infinite ;
+.under::after {
+  content: '_';
+  animation: iterateVisibility 1s ease infinite;
+  -moz-animation: iterateVisibility 1s ease infinite ;
+  -webkit-animation: iterateVisibility 1s ease infinite ;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
 }
 

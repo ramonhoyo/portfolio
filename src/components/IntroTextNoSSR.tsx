@@ -1,27 +1,12 @@
 "use client"
-import { Box, Zoom, Typography, Collapse } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import In from './In'
 import DynamicText from './DynamicText';
 
-
-const text = [
-  'After',
-  'eight',
-  'years as a software developer',
-  'creating'
-];
-
-
 export default function IntroTextoNoSSR() {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setOpen(true), 2000);
-  }, []);
-
   return (
-    <Box sx={{ zIndex: 1, mt: 2 }}>
+    <Box sx={{ zIndex: 1, mt: 2, }}>
       <Typography sx={{ fontSize: '2rem', display: 'contents' }} variant="h4">
         After
       </Typography>
