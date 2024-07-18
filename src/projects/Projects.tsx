@@ -277,7 +277,6 @@ export default function Projects() {
               description={item.description}
               icon={item.icon}
               imgs={item.imgs}
-              cover={item.cover}
               onSeeMore={() => setProject(item)}
               onLike={() => null}
             />

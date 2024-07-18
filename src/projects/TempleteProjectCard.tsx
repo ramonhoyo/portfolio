@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MarkdownPreview from '@uiw/react-markdown-preview';
-import { Box, Button, Divider, Grow, Tooltip, Zoom } from '@mui/material';
+import { Button, Divider, Tooltip } from '@mui/material';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
 import Image from 'next/image';
 
@@ -17,7 +17,6 @@ export type TempleteProjectCardProps = {
   subtitle: string;
   tags: string[];
   description: string;
-  cover: string;
   imgs: string[];
   icon?: string;
   onSeeMore: () => void;

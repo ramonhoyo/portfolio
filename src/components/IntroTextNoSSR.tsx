@@ -1,6 +1,5 @@
-"use client"
+import React from 'react'
 import { Box, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
 import In from './In'
 import DynamicText from './DynamicText';
 

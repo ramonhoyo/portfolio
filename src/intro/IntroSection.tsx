@@ -2,7 +2,7 @@
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ElderlyIcon from '@mui/icons-material/Elderly';
-import { Box, Button, Chip, Collapse, Container, Grid, Stack, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { Box, Button, Chip, Collapse, Container, Grid, Stack, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
 import IntroDetailsDialog from "./IntroDetailsDialog";
 import { useState } from "react";
 import IntroAccordion from "./IntroAccordion";
@@ -17,6 +17,7 @@ export default function IntroSection() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down('md'))
   const isSm = useMediaQuery(theme.breakpoints.only('sm'))
+  const isXs = useMediaQuery(theme.breakpoints.only('xs'))
 
   return (
     <Box sx={{ bgcolor: 'white', mt: 0 }}>
@@ -40,39 +41,29 @@ export default function IntroSection() {
                   <Chip icon={<ElderlyIcon color='primary' />} label="+7 years" variant="outlined" />
                 </Stack>
 
-
-
-                <Grid item xs={12} sx={{
-                  mt: 2,
-                  position: 'relative',
-                  zIndex: 0,
-                  justifyContent: 'center',
-                  display: 'flex',
-                }}>
-                  <Image
-                    alt="foo"
-                    width={0}
-                    height={500}
-                    sizes='100vw'
-                    priority={true}
-                    src="https://res.cloudinary.com/ramonhoyo/image/upload/w_600/h_400/v1721161282/porfolio/03.svg"
-                    style={{
-                      zIndex: 1,
-                      width: '100%',
-                      height: 'auto',
-                      position: 'absolute',
-                      top: downMd ? '90%' : '80%',
-                    }}
-                  />
-
-                  <IntroTextNoSSR />
-
-                  <br />
-
-                </Grid>
+                <IntroTextNoSSR />
+                <Image
+                  alt="main picture"
+                  width={0}
+                  height={500}
+                  sizes='100vw'
+                  src="https://res.cloudinary.com/ramonhoyo/image/upload/w_600/h_400/v1721161282/porfolio/03.svg"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
+                />
               </Grid>
 
-              <Grid item xs={12} md={6} sx={{ mt: isSm ? 64 : downMd ? 32 : 16, position: 'relative' }}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                sx={{
+                  position: 'relative',
+                  mt: downMd ? 2 : 16,
+                }}
+              >
                 <Box sx={{ height: 450 }} />
                 <VideosSection />
 
@@ -100,7 +91,7 @@ export default function IntroSection() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} sx={{ mt: downMd ? 0 : 16 }}>
+          <Grid item xs={12} sx={{ mt: downMd ? 2 : 8 }}>
             <IntroAccordion />
           </Grid>
           <Grid item xs={12} md={5} container spacing={2}>
