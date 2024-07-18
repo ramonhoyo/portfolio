@@ -42,7 +42,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 const sections = [
   {
     id: 'who-am-i',
-    title: 'How am I?',
+    title: 'Who am I?',
     subtitle: "",
     content: `
       I'm Ramón Hoyo, a sowftare architect and an apassionated software developer, I born on 1996 at Mérida, Venezuela. Where I am currently living.
