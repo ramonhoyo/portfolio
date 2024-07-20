@@ -11,12 +11,14 @@ import MarkdownPreview from '@uiw/react-markdown-preview';
 import { Button, Divider, Tooltip } from '@mui/material';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export type TempleteProjectCardProps = {
   title: string;
   subtitle: string;
   tags: string[];
   description: string;
+  label: string;
   imgs: string[];
   icon?: string;
   onSeeMore: () => void;
@@ -24,7 +26,7 @@ export type TempleteProjectCardProps = {
 };
 
 export default function TempleteProjectCard(props: TempleteProjectCardProps) {
-  const { title, subtitle, tags, description, imgs, icon, onSeeMore } = props;
+  const { title, subtitle, tags, description, imgs, icon, label } = props;
   const [isHover, setIsHover] = React.useState(false);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -87,9 +89,14 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
 
           <div style={{ flex: 1 }} />
 
-          <Button onClick={onSeeMore} variant='outlined'>Details</Button>
+          <Button
+            variant='outlined'
+            LinkComponent={Link}
+            href={`/projects/${label}`}
+          >
+            Details
+          </Button>
         </CardActions>
-
       </div>
     </Card >
   );
