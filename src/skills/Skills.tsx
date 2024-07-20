@@ -1,12 +1,11 @@
 "use client";
 import React from 'react'
 import { Box, Container, Grid, Tooltip, Typography } from '@mui/material'
-import BackendChart from './BackendChart'
-import FrontendChart from './FrontendChart'
-import DevopsSkills from './DevopsSkills';
 import InfiniteLooper from '@/components/InfiniteLooper';
 import { Sacramento } from 'next/font/google';
 import Image from 'next/image';
+import { SkillsData } from '@/data/skills';
+import SkillCard from './SkillCard';
 
 const sacramento = Sacramento({
   weight: '400',
@@ -77,7 +76,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
           height={32}
           width={32}
           style={{ margin: 32 }}
-          src={`https://cdn.simpleicons.org/${it}/gray`}
+          src={`${it}/gray`}
         />
       ))}
     </InfiniteLooper>
@@ -87,7 +86,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
 export default function Skills() {
   return (
     <Box id="skills" sx={{ position: 'relative' }}>
-      <IconsRendered icons={[...backendIcons, ...frontEndIcons, ...devOpsIcons]} direction='left' />
+      <IconsRendered icons={SkillsData.flatMap(it => it.imgs)} direction='left' />
 
       <Container maxWidth="lg">
         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -182,17 +181,16 @@ export default function Skills() {
           </Grid>
         </Grid>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <BackendChart />
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <FrontendChart />
-          </Grid>
-
-          <Grid item xs={12}>
-            <DevopsSkills />
-          </Grid>
+          {SkillsData.map((it, i) => (
+            <Grid
+              key={it.label}
+              item
+              xs={12}
+              md={i === SkillsData.length - 1 && !(i % 2) ? 12 : 6}
+            >
+              <SkillCard data={it} />
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </Box>

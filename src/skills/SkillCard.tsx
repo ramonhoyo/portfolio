@@ -1,13 +1,13 @@
-"use client";
 import { Box, Button, Card } from '@mui/material';
 import React from 'react';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import BackendDetailsDialog from './BackendDetailsDialog';
-import BackendChartComponent from './BackendChartComponent';
+import SkillChartComponent from './SkillChartComponent';
 
-export default function BackendChart() {
-  const [open, setOpen] = React.useState(false);
+export type Props = {
+  data: any;
+};
 
+export default function SkillCard({ data }: Props) {
   return (
     <Box sx={{ position: 'relative', p: 2 }}>
       <Card
@@ -23,19 +23,20 @@ export default function BackendChart() {
       </Card>
 
       <Box sx={{ pt: 4 }}>
-        <BackendChartComponent />
+        <SkillChartComponent
+          data={data.chart.data}
+          strokeColor={data.chart.strokeColor}
+          fillColor={data.chart.fillColor}
+        />
         <Box sx={{ zIndex: 100, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
           <Button
+            href={`/skills/${data.label}`}
             endIcon={<OpenInFullIcon />}
-            onClick={() => setOpen(true)}
           >
-            Backend
+            {data.title}
           </Button>
         </Box>
       </Box>
-
-
-      <BackendDetailsDialog open={open} setOpen={setOpen} />
     </Box>
   );
 }

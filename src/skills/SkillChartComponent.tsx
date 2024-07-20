@@ -1,18 +1,15 @@
 "use client";
-import { green } from '@mui/material/colors';
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
-const data = [
-  { subject: 'TypeORM (MySQL, Postgres)', A: 80 },
-  { subject: 'Mongoose', A: 85 },
-  { subject: 'Swagger', A: 90 },
-  { subject: 'GraphQL', A: 75 },
-  { subject: 'Redis', A: 80 },
-  { subject: 'BullMQ', A: 80 },
-];
+export type Props = {
+  data: any[];
+  fillColor: string;
+  strokeColor: string;
+}
 
-export default function BackendChartComponent() {
+export default function SkillChartComponent(props: Props) {
+  const { data, fillColor, strokeColor } = props;
   return (
     <ResponsiveContainer minHeight='20rem' width="100%" height="100%">
       <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
@@ -20,7 +17,8 @@ export default function BackendChartComponent() {
         <PolarAngleAxis dataKey="subject" domain={[0, 100]} />
         <PolarRadiusAxis />
         <Tooltip />
-        <Radar name="Backend" dataKey="A" stroke={green[500]} fill={green[200]} fillOpacity={0.6} />
+        <Radar name="Backend" dataKey="A"
+          stroke={strokeColor} fill={fillColor} fillOpacity={0.6} />
       </RadarChart>
     </ResponsiveContainer>
   );
