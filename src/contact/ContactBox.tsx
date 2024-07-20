@@ -1,4 +1,5 @@
-import { Box, breadcrumbsClasses, Button, Grid, IconButton, Typography } from '@mui/material'
+"use client";
+import { Button, Grid, IconButton, Stack, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
@@ -19,6 +20,7 @@ export type Props = {
 
 export default function ContactBox(props: Props) {
   const { size, hideName, hideEmailButton } = props;
+  const theme = useTheme();
 
   let sizePx = 126;
   switch (size) {
@@ -51,13 +53,19 @@ export default function ContactBox(props: Props) {
       </Grid>
 
       <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <Box sx={{ display: 'flex', justifyContent: 'center', }}>
+        <Stack direction='row'>
           {data.map((item) => (
-            <IconButton href={item.link} key={item.link}>
-              <Image alt={item.text} width={32} height={32} src={`https://cdn.simpleicons.org/${item.icon}/`} />
+            <IconButton href={item.link} key={item.link} sx={{ borderWidth: 4 }}>
+              <Image
+                style={{ border: `solid 1px ${theme.palette.primary.main}`, borderRadius: 20, padding: 4 }}
+                alt={item.text}
+                width={36}
+                height={36}
+                src={`https://cdn.simpleicons.org/${item.icon}/${theme.palette.primary.main.slice(1)}`}
+              />
             </IconButton>
           ))}
-        </Box>
+        </Stack>
 
         <Typography variant='caption' color='secondary'>Find me on social media</Typography>
       </Grid>
