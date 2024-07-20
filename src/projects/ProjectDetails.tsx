@@ -6,7 +6,6 @@ import InfiniteLooper from '@/components/InfiniteLooper';
 import Image from 'next/image';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
 import DynamicText from '@/components/DynamicText';
-import { Add as AddIcon } from '@mui/icons-material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export type ProjectDetailsProps = {
@@ -18,13 +17,12 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down('md'));
 
-
   return (
     <Container maxWidth='lg'>
       <Stack spacing={2} sx={{ p: 2 }}>
         <Stack direction='row'>
           <Stack flex={1}>
-            <Typography variant='h3' color='primary'>{title}</Typography>
+            <Typography variant={downMd ? 'h4' : 'h3'} color='primary'>{title}</Typography>
             <DynamicText variant='h5' texts={[subtitle]} ms={40} />
           </Stack>
 
