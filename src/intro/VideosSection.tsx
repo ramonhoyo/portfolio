@@ -33,8 +33,7 @@ export default function VideosSection() {
       const nextIndex = index + 1 < data.length ? index + 1 : 0;
       setIndex(nextIndex);
     }, 5000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [index]);
 
   return (
     <Box position='absolute' left={0} right={0} bottom={0} top={0}>
@@ -46,7 +45,7 @@ export default function VideosSection() {
               disableRemotePlayback
               poster={it.poster}
               src={it.video}
-              autoPlay={index === idx}
+              autoPlay
               loop
               width={400}
               height={400}
