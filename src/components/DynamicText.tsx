@@ -51,7 +51,7 @@ export default function DynamicText(props: DynamicTextProps) {
 
       return result;
     });
-  }, [texts]);
+  }, [texts, reverse]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -66,7 +66,7 @@ export default function DynamicText(props: DynamicTextProps) {
       setPos(pos + 1);
     }, ms || 120);
     return () => clearInterval(interval);
-  }, [textStacks, index, pos, ms]);
+  }, [textStacks, index, pos, ms, loop]);
 
   return (
     <div style={{ position: 'relative' }}>

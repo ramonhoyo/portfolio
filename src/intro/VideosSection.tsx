@@ -28,14 +28,13 @@ const data = [
 export default function VideosSection() {
   const [index, setIndex] = useState(0);
 
-  const handleInterval = () => {
-    const nextIndex = index + 1 < data.length ? index + 1 : 0;
-    setIndex(nextIndex);
-  };
-
   useEffect(() => {
-    setTimeout(() => handleInterval(), 5000);
-  }, [handleInterval]);
+    setTimeout(() => {
+      const nextIndex = index + 1 < data.length ? index + 1 : 0;
+      setIndex(nextIndex);
+    }, 5000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Box position='absolute' left={0} right={0} bottom={0} top={0}>
