@@ -8,6 +8,7 @@ import { SpeedDial, SpeedDialAction, SpeedDialIcon, useMediaQuery, useTheme, Zoo
 import {
   PictureAsPdf as PictureAsPdfIcon,
   Email as EmailIcon,
+  ConnectWithoutContact,
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 
@@ -56,9 +57,9 @@ export default function Home() {
       {isXs && (
         <Zoom in={initialFabDelay && scrollDirection === 'up'}>
           <SpeedDial
-            ariaLabel="SpeedDial basic example"
+            ariaLabel="connect"
             sx={{ position: 'fixed', bottom: 32, right: 32 }}
-            icon={<SpeedDialIcon />}
+            icon={<SpeedDialIcon icon={<ConnectWithoutContact />} />}
           >
             {actions.map((action) => (
               <SpeedDialAction

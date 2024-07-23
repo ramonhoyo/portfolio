@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MarkdownPreview from '@uiw/react-markdown-preview';
-import { Button, Divider, Tooltip } from '@mui/material';
+import { Button, Divider, Tooltip, useTheme } from '@mui/material';
 import SwipeableTextMobileStepper from '@/components/SwipeableViews';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,6 +28,7 @@ export type TempleteProjectCardProps = {
 export default function TempleteProjectCard(props: TempleteProjectCardProps) {
   const { title, subtitle, tags, description, imgs, icon, label } = props;
   const [isHover, setIsHover] = React.useState(false);
+  const theme = useTheme();
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     setIsHover(true);
@@ -38,7 +39,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
   };
 
   return (
-    <Card elevation={isHover ? 24 : 0}>
+    <Card elevation={isHover ? 24 : 0} variant='outlined'>
       <div
         onMouseEnter={handleMouseEnter} onMouseLeave={handleOnMouseLeave}
       >
@@ -69,7 +70,13 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
             display: { xs: 'none', sm: 'block' },
           }}
         >
-          <MarkdownPreview source={description} style={{ background: 'white', color: 'black' }} />
+          <MarkdownPreview
+            source={description}
+            style={{
+              background: theme.palette.background.paper,
+              color: theme.palette.text.primary,
+            }}
+          />
         </CardContent>
 
         <Divider />
@@ -82,7 +89,7 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
                 width={32}
                 key={tag}
                 style={{ padding: 4 }}
-                src={`https://cdn.simpleicons.org/${tag}/`}
+                src={`https://cdn.simpleicons.org/${tag}/${theme.palette.mode === 'dark' ? 'white' : ''}`}
               />
             </Tooltip>
           )}

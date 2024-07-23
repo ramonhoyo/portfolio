@@ -52,7 +52,13 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
           <InfiniteLooper speed={100} direction='right'>
             {tags.map((tag: string, idx: number) => (
               <Tooltip title={tag} key={`${tag}-${idx}`}>
-                <Image alt={tag} style={{ margin: 32, }} height={32} width={32} src={`https://cdn.simpleicons.org/${tag}/gray`} />
+                <Image
+                  alt={tag}
+                  style={{ margin: 32 }}
+                  height={32}
+                  width={32}
+                  src={`https://cdn.simpleicons.org/${tag}/${theme.palette.primary.main.slice(1)}`}
+                />
               </Tooltip>
             ))}
           </InfiniteLooper>
@@ -61,7 +67,7 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
           source={description}
           style={{
             background: theme.palette.background.default,
-            color: 'black',
+            color: theme.palette.text.primary,
           }}
         />
       </Stack>

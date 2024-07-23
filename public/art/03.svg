@@ -2191,7 +2191,7 @@
        transform="scale(0.1)">
       <path
          d="M 0,0 H 24750 V 16500 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none"
          id="path12" />
       <g
          id="g14">

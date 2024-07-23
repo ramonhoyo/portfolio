@@ -1,4 +1,5 @@
 "use client";
+import DynamicText from '@/components/DynamicText';
 import { Button, Grid, IconButton, Stack, Typography, useTheme } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
@@ -38,14 +39,25 @@ export default function ContactBox(props: Props) {
     <Grid container spacing={2}>
       <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
         <Image
-          style={{ objectFit: "cover", borderRadius: '50%', borderWidth: 2, borderColor: '#8f4c38', borderStyle: 'solid' }}
+          style={{
+            objectFit: "cover",
+            borderRadius: '50%',
+            borderWidth: 2,
+            borderColor: theme.palette.primary.main,
+            borderStyle: 'solid',
+          }}
           src="/rahoyo-img-no-bg.png" alt="Ramón hoyo picture" width={sizePx} height={sizePx}
         />
       </Grid>
 
       <Grid item xs={12} sx={{ display: hideName ? 'none' : 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant='h5'>Ramón Hoyo</Typography>
-        <Typography variant='subtitle1'>Fullstack Developer</Typography>
+        <DynamicText
+          texts={['Fullstack Developer', 'Software Architect']}
+          variant='h6'
+          loop
+          reverse
+        />
       </Grid>
 
       <Grid item xs={12} sx={{ display: hideEmailButton ? 'none' : 'flex', justifyContent: 'center' }}>

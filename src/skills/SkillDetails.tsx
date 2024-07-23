@@ -35,7 +35,7 @@ export default function SkillDetails({ skill }: Props) {
               height={32}
               width={32}
               style={{ margin: 32 }}
-              src={it}
+              src={it + '/' + theme.palette.primary.main.slice(1)}
             />
           ))}
         </InfiniteLooper>
@@ -43,7 +43,10 @@ export default function SkillDetails({ skill }: Props) {
 
       <Box sx={{ p: 2 }}>
         <MarkdownPreview
-          style={{ backgroundColor: theme.palette.background.default, color: 'black', }}
+          style={{
+            backgroundColor: theme.palette.background.default,
+            color: theme.palette.text.primary,
+          }}
           source={skill.description}
         />
       </Box>
