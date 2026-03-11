@@ -88,8 +88,9 @@ export default function TempleteProjectCard(props: TempleteProjectCardProps) {
                 height={32}
                 width={32}
                 key={tag}
+                unoptimized
                 style={{ padding: 4 }}
-                src={`https://cdn.simpleicons.org/${tag}/${theme.palette.mode === 'dark' ? 'white' : ''}`}
+                src={`https://cdn.simpleicons.org/${tag}${theme.palette.mode === 'dark' ? '/white' : ''}`}
               />
             </Tooltip>
           )}

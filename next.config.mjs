@@ -3,6 +3,7 @@ const nextConfig = {
   output: "standalone",
   images: {
     dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,6 +14,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'github.com',
+        port: '',
+        pathname: '/ramonhoyo/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
         port: '',
         pathname: '/ramonhoyo/**'
       },

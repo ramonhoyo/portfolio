@@ -75,6 +75,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
           alt={it}
           height={32}
           width={32}
+          unoptimized
           style={{ margin: 32 }}
           src={`${it}/gray`}
         />
@@ -117,6 +118,7 @@ export default function Skills() {
                       alt={it.title}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
@@ -143,6 +145,7 @@ export default function Skills() {
                       alt={it.name}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
@@ -169,6 +172,7 @@ export default function Skills() {
                       alt={it.name}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>

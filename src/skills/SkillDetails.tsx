@@ -34,6 +34,7 @@ export default function SkillDetails({ skill }: Props) {
               alt={it}
               height={32}
               width={32}
+              unoptimized
               style={{ margin: 32 }}
               src={it + '/' + theme.palette.primary.main.slice(1)}
             />
