@@ -26,7 +26,7 @@ const frontEndIcons = [
 const devOpsIcons = [
   "github",
   "kubernetes",
-  "amazonwebservices",
+  "firebase",
   "docker",
   "googlecloud",
   "terraform",
@@ -59,7 +59,7 @@ const lansStack = [
 ];
 
 const toolsStack = [
-  { title: 'Neovim', name: 'Neovim', fill: '#00ADD8' },
+  { title: 'Neovim', name: 'neovim', fill: '#00ADD8' },
   { title: 'Git', name: 'git', fill: '#3366CC' },
   { title: 'Linux', name: 'linux', fill: '#4479A1' },
   //  { title: 'Drawio', name: 'diagramsdotnet', fill: '#7F52FF' },
@@ -75,6 +75,7 @@ function IconsRendered({ icons, direction }: { icons: string[], direction: 'left
           alt={it}
           height={32}
           width={32}
+          unoptimized
           style={{ margin: 32 }}
           src={`${it}/gray`}
         />
@@ -117,6 +118,7 @@ export default function Skills() {
                       alt={it.title}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
@@ -143,6 +145,7 @@ export default function Skills() {
                       alt={it.name}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>
@@ -169,6 +172,7 @@ export default function Skills() {
                       alt={it.name}
                       height="64"
                       width="64"
+                      unoptimized
                       src={`https://cdn.simpleicons.org/${it.name}`}
                     />
                     <Typography variant="h5" sx={{ color: it.fill, textTransform: 'capitalize' }}>

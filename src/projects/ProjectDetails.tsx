@@ -57,6 +57,7 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
                   style={{ margin: 32 }}
                   height={32}
                   width={32}
+                  unoptimized
                   src={`https://cdn.simpleicons.org/${tag}/${theme.palette.primary.main.slice(1)}`}
                 />
               </Tooltip>

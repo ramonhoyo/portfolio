@@ -73,6 +73,7 @@ export default function ContactBox(props: Props) {
                 alt={item.text}
                 width={36}
                 height={36}
+                unoptimized
                 src={`https://cdn.simpleicons.org/${item.icon}/${theme.palette.primary.main.slice(1)}`}
               />
             </IconButton>

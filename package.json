@@ -24,7 +24,8 @@
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0",
     "recharts": "^2.12.7",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "simple-icons": "^16.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",
