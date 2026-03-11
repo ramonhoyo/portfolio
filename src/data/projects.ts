@@ -50,7 +50,7 @@ Manage your funds safely and reliably with BSPay Wallet, giving you the protecti
     label: 'cyphertop-desktop',
     icon: 'https://res.cloudinary.com/ramonhoyo/image/upload/v1721281694/cft_icon.png',
     subtitle: 'Encryption application build with ElectronJS',
-    tags: ['react', 'redux', 'electron', 'typescript', 'c++', 'webrtc', 'gitlab'],
+    tags: ['react', 'redux', 'electron', 'typescript', 'cplusplus', 'webrtc', 'gitlab'],
     externalUrl: 'https://cyphertop.com/',
     description: `
 **Security application allow users to:**
@@ -132,7 +132,7 @@ please refer to the file ["Challenge.pdf"](https://github.com/ramonhoyo/disructi
     label: 'cypertop-android',
     icon: 'https://res.cloudinary.com/ramonhoyo/image/upload/v1721281694/cft_icon.png',
     subtitle: 'Encryption application for Android with custom encryption algorithm.',
-    tags: ['android', 'androidstudio', 'gitlab', 'kotlin', 'c++', 'webrtc'],
+    tags: ['android', 'androidstudio', 'gitlab', 'kotlin', 'cplusplus', 'webrtc'],
     externalUrl: 'https://play.google.com/store/apps/details?id=com.cyphertop',
     description: `
 **This is the Android version of Cyphertop application**

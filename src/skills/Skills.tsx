@@ -26,7 +26,7 @@ const frontEndIcons = [
 const devOpsIcons = [
   "github",
   "kubernetes",
-  "amazonwebservices",
+  "firebase",
   "docker",
   "googlecloud",
   "terraform",
@@ -59,7 +59,7 @@ const lansStack = [
 ];
 
 const toolsStack = [
-  { title: 'Neovim', name: 'Neovim', fill: '#00ADD8' },
+  { title: 'Neovim', name: 'neovim', fill: '#00ADD8' },
   { title: 'Git', name: 'git', fill: '#3366CC' },
   { title: 'Linux', name: 'linux', fill: '#4479A1' },
   //  { title: 'Drawio', name: 'diagramsdotnet', fill: '#7F52FF' },

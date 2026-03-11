@@ -143,7 +143,7 @@ As software developer, I have been working with Devops tools and practices for a
     imgs: [
       "https://cdn.simpleicons.org/github",
       "https://cdn.simpleicons.org/kubernetes",
-      "https://cdn.simpleicons.org/amazonwebservices",
+      "https://cdn.simpleicons.org/firebase",
       "https://cdn.simpleicons.org/docker",
       "https://cdn.simpleicons.org/googlecloud",
       "https://cdn.simpleicons.org/terraform",
